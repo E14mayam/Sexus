@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "Bodoni";
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/BodoniModa36pt-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  font-display: swap;
+  font-weight: 100;
+  font-style: normal;
+  src: url("../fonts/AlbertSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  font-display: swap;
+  font-weight: 200;
+  font-style: normal;
+  src: url("../fonts/AlbertSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/AlbertSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/AlbertSans-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/AlbertSans-Black.ttf") format("truetype");
+}
+
+* {
+  font-family: "Albert Sans";
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f6f6f6;
+}
+
+.Header .title {
+  font-size: 3rem;
+  font-family: "Bodoni";
+  color: #212121;
+}
+
+.Header h6 {
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.Header .headerBtn {
+  background: url("../icons/menu.svg");
+  background-color: #d9cab3;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+}
+
+.Header .headerBtn.active {
+  background: url("../icons/x.svg");
+  background-size: contain;
+}
+
+.Header .User {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #d9cab3;
+}
+
+.Header .User img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background-color: #d9cab3;
+}
+
+.Header .User h5 {
+  background-color: #d9cab3;
+  font-weight: 400;
+}
+
+.Header header {
+  background-color: #d9cab3;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 3px;
+}
+
+.Header .Navbar {
+  background-color: #d9cab3;
+}
+
+.Header .Navbar a {
+  color: #212121;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-weight: 400;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  text-transform: uppercase;
+  background-color: #d9cab3;
+}
+
+.Header .Navbar a:hover {
+  color: #d9cab3;
+  -webkit-box-shadow: inset 300px 0px #212121;
+          box-shadow: inset 300px 0px #212121;
+}
+
+.Home .featured-wrapper .featured-wrapper-txt {
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: left;
+}
+
+.Home .featured-wrapper .featured-content {
+  padding: 10px 10px;
+  max-width: 600px;
+  max-height: 500px;
+  position: relative;
+}
+
+.Home .featured-wrapper .featured-content .featured-content-txt p {
+  text-align: left;
+  font-weight: 200;
+}
+
+.Home .featured-wrapper .featured-content .featured-content-txt h1 {
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.Home .featured-wrapper .featured-content .featured-content-txt a {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #212121;
+  text-decoration: none;
+}
+
+.Home .featured-wrapper .featured-content .featured-content-txt a img {
+  width: 20px;
+  border: none;
+}
+
+.Home .featured-wrapper .featured-content img {
+  width: 100%;
+  height: 80%;
+}
+/*# sourceMappingURL=App.css.map */

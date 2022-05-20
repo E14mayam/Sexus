@@ -1,0 +1,168 @@
+//typefaces
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: "Bodoni";
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/BodoniModa36pt-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  font-display: swap;
+  font-weight: 100;
+  font-style: normal;
+  src: url("../fonts/AlbertSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  font-display: swap;
+  font-weight: 200;
+  font-style: normal;
+  src: url("../fonts/AlbertSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/AlbertSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/AlbertSans-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/AlbertSans-Black.ttf") format("truetype");
+}
+
+//colors and fonts
+$main-color: #212121;
+$secondary-color: #6d9886;
+$accent-color: #d9cab3;
+$background-color: #f6f6f6;
+$secondary-font: "Bodoni";
+
+// Global Styling
+* {
+  font-family: "Albert Sans";
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  background-color: $background-color;
+}
+
+//Header
+.Header {
+  .title {
+    font-size: 3rem;
+    font-family: $secondary-font;
+    color: $main-color;
+  }
+  h6 {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+  .headerBtn {
+    background: url("../icons/menu.svg");
+    background-color: $accent-color;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+  }
+  .headerBtn.active {
+    background: url("../icons/x.svg");
+    background-size: contain;
+  }
+  //User Info
+  .User {
+    align-items: center;
+    background-color: $accent-color;
+    img {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      background-color: $accent-color;
+    }
+    h5 {
+      background-color: $accent-color;
+      font-weight: 400;
+    }
+  }
+  //Header
+  header {
+    background-color: $accent-color;
+    align-items: center;
+    border-radius: 3px;
+  }
+  //Navbar
+  .Navbar {
+    background-color: $accent-color;
+    a {
+      color: $main-color;
+      text-decoration: none;
+      padding: 5px 10px;
+      font-weight: 400;
+      transition: 0.8s;
+      text-transform: uppercase;
+      background-color: $accent-color;
+      &:hover {
+        color: $accent-color;
+        box-shadow: inset 300px 0px $main-color;
+      }
+    }
+  }
+}
+
+.Home {
+  .featured-wrapper {
+    .featured-wrapper-txt {
+      text-transform: uppercase;
+      font-weight: 400;
+      text-align: left;
+    }
+    .featured-content {
+      padding: 10px 10px;
+      max-width: 600px;
+      max-height: 500px;
+      position: relative;
+      .featured-content-txt{
+        p {
+          text-align: left;
+          font-weight: 200;
+        }
+        h1 {
+          text-align: left;
+          text-transform: uppercase;
+          font-weight: 400;
+        }
+        a {
+          align-items: center;
+          color: $main-color;
+          text-decoration: none;
+          img {
+            width: 20px;
+            border: none;
+          }
+        }
+      }
+      img {
+        width: 100%;
+        height: 80%;
+      }
+    }
+  }
+}
