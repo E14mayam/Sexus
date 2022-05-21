@@ -79,6 +79,8 @@ $secondary-font: "Bodoni";
   .headerBtn {
     background: url("../icons/menu.svg");
     background-color: $accent-color;
+    outline: none;
+    border: none;
     background-size: contain;
     width: 25px;
     height: 25px;
