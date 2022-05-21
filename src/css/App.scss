@@ -142,7 +142,7 @@ $secondary-font: "Bodoni";
   .Header{
     .Navbar.active{
       display: block;
-      top: 100px;
+      top: 50px;
       position: fixed;
       align-items: center;
       justify-content: center;
@@ -151,7 +151,7 @@ $secondary-font: "Bodoni";
       right: 0;
       flex-direction: column;
       background: none;
-      backdrop-filter: blur(2px) brightness(89%);
+      backdrop-filter: blur(5px);
       a{
         font-size: 25px;
         margin: 10px 0px;
