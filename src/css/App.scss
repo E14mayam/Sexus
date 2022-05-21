@@ -138,6 +138,29 @@ $secondary-font: "Bodoni";
   }
 }
 
+@media(max-width: 768px){
+  .Header{
+    .Navbar.active{
+      display: block;
+      top: 100px;
+      position: fixed;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: none;
+      backdrop-filter: blur(2px) brightness(89%);
+      a{
+        font-size: 25px;
+        margin: 10px 0px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
 .Home {
   .featured-wrapper {
     .featured-wrapper-txt {
@@ -176,6 +199,10 @@ $secondary-font: "Bodoni";
       }
     }
   }
+}
+
+.content{
+  left: 200px;
 }
 
 .blog{

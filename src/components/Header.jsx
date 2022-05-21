@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <div className="Header py-4 d-flex flex-column px-3">
       <header className="container d-flex justify-content-between py-2 px-3">
-        <nav className="Navbar d-none d-lg-flex d-md-flex d-sm-none">
+        <nav className={`Navbar ${exit ? "active" : ""} d-${exit ? "flex" : "none"} d-lg-flex d-md-flex d-sm-${exit ? "flex" : "none"}`}>
           <Link to="/" className="h6 mx-2">
             Home
           </Link>

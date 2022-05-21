@@ -5,7 +5,7 @@ import image2 from "../assets/image2.jpg";
 import image3 from "../assets/image3.jpg";
 const Blog = () => {
   return (
-    <div className="blog container mx-auto row row-cols-3 mt-5">
+    <div className="blog content container mx-auto row row-cols-3 mt-5">
       <div className="blog-post mx-auto col-lg-4 col-md-6 col-sm-12">
         <img src={image1} alt={placeholderImg} />
         <h5 className="h5 py-2">Best Kissing Practices</h5>
