@@ -56,6 +56,10 @@
   background-color: #f6f6f6;
 }
 
+* .placeholderImg {
+  max-width: 300px;
+}
+
 .Header .title {
   font-size: 3rem;
   font-family: "Bodoni";
@@ -181,7 +185,23 @@
   height: 80%;
 }
 
-.placeholderImg {
-  max-width: 300px;
+.blog .blog-post {
+  width: 300px;
+  height: 400px;
+  text-align: left;
+}
+
+.blog .blog-post h5 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.blog .blog-post p {
+  font-weight: 200;
+}
+
+.blog .blog-post img {
+  width: 100%;
+  height: 200px;
 }
 /*# sourceMappingURL=App.css.map */
