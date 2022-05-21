@@ -162,7 +162,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     background: none;
-    background-color: #21212152;
+    background-color: #21212186;
     -webkit-animation: growDown 400ms ease-in-out forwards;
             animation: growDown 400ms ease-in-out forwards;
     -webkit-transform-origin: top center;
@@ -270,19 +270,20 @@
 
 .blog .blog-post-icons h6 {
   padding: 10px 10px;
-  background-color: #d9cab3;
+  -webkit-box-shadow: 3px 3px 10px #cacaca;
+          box-shadow: 3px 3px 10px #cacaca;
+  border-radius: 3px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-transform: uppercase;
   font-weight: 100;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .blog .blog-post-icons h6 img {
-  width: 13px;
-  height: 13px;
-  background-color: #d9cab3;
+  width: 15px;
+  height: 15px;
   margin: 0 5px;
 }
 /*# sourceMappingURL=App.css.map */

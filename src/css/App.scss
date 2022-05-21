@@ -152,7 +152,7 @@ $secondary-font: "Bodoni";
       right: 0;
       flex-direction: column;
       background: none;
-      background-color: #21212152;
+      background-color: #21212186;
       animation: growDown 400ms ease-in-out forwards;
       transform-origin: top center;
       a {
@@ -240,15 +240,15 @@ $secondary-font: "Bodoni";
   .blog-post-icons{
     h6{
       padding: 10px 10px;
-      background-color: $accent-color;
+      box-shadow: 3px 3px 10px rgb(202, 202, 202);
+      border-radius: 3px;
       align-items: center;
       text-transform: uppercase;
       font-weight: 100;
-      font-size: 13px;
+      font-size: 12px;
       img{
-        width: 13px;
-        height: 13px;
-        background-color: $accent-color;
+        width: 15px;
+        height: 15px;
         margin: 0 5px;
       }
     }

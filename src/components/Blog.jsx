@@ -4,7 +4,7 @@ import image1 from "../assets/image1.jpg";
 import image2 from "../assets/image2.jpg";
 import image3 from "../assets/image3.jpg";
 import comment from "../icons/message-square.svg"
-import clap from "../icons/clap.png"
+import clap from "../icons/clap.svg"
 
 const Blog = () => {
   return (
@@ -17,7 +17,7 @@ const Blog = () => {
           porro...
         </p>
         <div className="blog-post-icons d-flex">
-          <h6 className="d-flex">Comment <img src={comment} alt="" /></h6>
+          <h6 className="d-flex me-1">Comment <img src={comment} alt="" /></h6>
           <h6 className="d-flex">Clap <img src={clap} alt="" /></h6>
         </div>
       </div>
@@ -29,7 +29,7 @@ const Blog = () => {
           porro...
         </p>
         <div className="blog-post-icons d-flex">
-          <h6 className="d-flex">Comment <img src={comment} alt="" /></h6>
+          <h6 className="d-flex me-1">Comment <img src={comment} alt="" /></h6>
           <h6 className="d-flex">Clap <img src={clap} alt="" /></h6>
         </div>
       </div>
@@ -41,7 +41,7 @@ const Blog = () => {
           porro...
         </p>
         <div className="blog-post-icons d-flex">
-          <h6 className="d-flex">Comment <img src={comment} alt="" /></h6>
+          <h6 className="d-flex me-1">Comment <img src={comment} alt="" /></h6>
           <h6 className="d-flex">Clap <img src={clap} alt="" /></h6>
         </div>
       </div>
