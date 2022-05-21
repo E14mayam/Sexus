@@ -91,15 +91,19 @@ $secondary-font: "Bodoni";
   .User {
     align-items: center;
     background-color: $accent-color;
+    
     img {
       width: 25px;
       height: 25px;
       margin-right: 10px;
       background-color: $accent-color;
+      cursor: pointer;
     }
     h5 {
       background-color: $accent-color;
       font-weight: 400;
+      text-transform: uppercase;
+      cursor: pointer;
     }
   }
   //Header
@@ -111,6 +115,8 @@ $secondary-font: "Bodoni";
   //Navbar
   .Navbar {
     background-color: $accent-color;
+    display: flex;
+    align-items: center;
     a {
       color: $main-color;
       text-decoration: none;
@@ -165,4 +171,8 @@ $secondary-font: "Bodoni";
       }
     }
   }
+}
+
+.placeholderImg{
+  max-width: 450px;
 }
