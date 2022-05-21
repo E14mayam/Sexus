@@ -3,6 +3,7 @@ import placeholderImg from "../assets/tokyo-attention-sign-in-the-web-browser.pn
 import image1 from "../assets/image1.jpg";
 import image2 from "../assets/image2.jpg";
 import image3 from "../assets/image3.jpg";
+
 const Blog = () => {
   return (
     <div className="blog content container mx-auto row row-cols-3 mt-5">
