@@ -153,12 +153,17 @@ $secondary-font: "Bodoni";
       flex-direction: column;
       background: none;
       background-color: #21212186;
+      transition: 0.7s;
       animation: growDown 400ms ease-in-out forwards;
       transform-origin: top center;
       a {
         font-size: 20px;
+        font-weight: 200;
         margin: 10px 0px;
-        border-radius: 3px;
+        border-radius: 2px;
+        &:hover{
+          box-shadow: none;
+        }
       }
     }
   }

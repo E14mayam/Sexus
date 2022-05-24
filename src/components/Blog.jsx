@@ -17,8 +17,8 @@ const Blog = () => {
           porro...
         </p>
         <div className="blog-post-icons d-flex">
-          <h6 className="d-flex me-1">Comment <img src={comment} alt="" /></h6>
-          <h6 className="d-flex">Clap <img src={clap} alt="" /></h6>
+          <h6 className="d-flex me-1"><img src={comment} alt="" /> 0 </h6>
+          <h6 className="d-flex"><img src={clap} alt="" /> 0 </h6>
         </div>
       </div>
       <div className="blog-post mx-auto col-lg-4 col-md-6 col-sm-12">
@@ -29,8 +29,8 @@ const Blog = () => {
           porro...
         </p>
         <div className="blog-post-icons d-flex">
-          <h6 className="d-flex me-1">Comment <img src={comment} alt="" /></h6>
-          <h6 className="d-flex">Clap <img src={clap} alt="" /></h6>
+          <h6 className="d-flex me-1"><img src={comment} alt="" /> 0 </h6>
+          <h6 className="d-flex"><img src={clap} alt="" /> 0 </h6>
         </div>
       </div>
       <div className="blog-post mx-auto col-lg-4 col-md-6 col-sm-12">
@@ -41,8 +41,8 @@ const Blog = () => {
           porro...
         </p>
         <div className="blog-post-icons d-flex">
-          <h6 className="d-flex me-1">Comment <img src={comment} alt="" /></h6>
-          <h6 className="d-flex">Clap <img src={clap} alt="" /></h6>
+          <h6 className="d-flex me-1"><img src={comment} alt="" /> 0 </h6>
+          <h6 className="d-flex"><img src={clap} alt="" /> 0 </h6>
         </div>
       </div>
     </div>
