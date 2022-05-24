@@ -60,11 +60,6 @@
   max-width: 300px;
 }
 
-.Header {
-  -webkit-transition: 0.8s all;
-  transition: 0.8s all;
-}
-
 .Header .title {
   font-size: 3rem;
   font-family: "Bodoni";
