@@ -272,7 +272,12 @@
   height: 200px;
 }
 
-.blog .blog-post-icons h6 {
+.blog .blog-post-icons button {
+  outline: none;
+  border: none;
+}
+
+.blog .blog-post-icons button h6 {
   padding: 10px 10px;
   -webkit-box-shadow: 3px 3px 10px #cacaca;
           box-shadow: 3px 3px 10px #cacaca;
@@ -284,7 +289,7 @@
   font-size: 12px;
 }
 
-.blog .blog-post-icons h6 img {
+.blog .blog-post-icons button h6 img {
   width: 15px;
   height: 15px;
   margin: 0 5px;

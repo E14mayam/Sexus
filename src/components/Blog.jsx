@@ -1,12 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 import placeholderImg from "../assets/tokyo-attention-sign-in-the-web-browser.png";
 import image1 from "../assets/image1.jpg";
 import image2 from "../assets/image2.jpg";
 import image3 from "../assets/image3.jpg";
-import comment from "../icons/message-square.svg"
-import clap from "../icons/clap.svg"
+import commentImg from "../icons/message-square.svg"
+import clapImg from "../icons/clap.svg"
 
 const Blog = () => {
+
+  const [comment, setComment] = useState(0)
+  const [clap, setClap] = useState(0)
+
+  function incrementClap(){
+    setClap(() =>{
+      return clap + 1
+    })
+  }
+
   return (
     <div className="blog content container mx-auto row row-cols-3 mt-5">
       <div className="blog-post mx-auto col-lg-4 col-md-6 col-sm-12">
@@ -17,8 +27,12 @@ const Blog = () => {
           porro...
         </p>
         <div className="blog-post-icons d-flex">
-          <h6 className="d-flex me-1"><img src={comment} alt="" /> 0 </h6>
-          <h6 className="d-flex"><img src={clap} alt="" /> 0 </h6>
+          <button>
+          <h6 className="d-flex me-1"><img src={commentImg} alt="" /> {comment} </h6>
+          </button>
+          <button onClick={incrementClap} className="d-flex">
+          <h6 className="d-flex"><img src={clapImg} alt="" /> {clap} </h6>
+          </button>
         </div>
       </div>
       <div className="blog-post mx-auto col-lg-4 col-md-6 col-sm-12">
@@ -29,8 +43,12 @@ const Blog = () => {
           porro...
         </p>
         <div className="blog-post-icons d-flex">
-          <h6 className="d-flex me-1"><img src={comment} alt="" /> 0 </h6>
-          <h6 className="d-flex"><img src={clap} alt="" /> 0 </h6>
+          <button>
+          <h6 className="d-flex me-1"><img src={commentImg} alt="" /> {comment} </h6>
+          </button>
+          <button onClick={incrementClap} className="d-flex">
+          <h6 className="d-flex"><img src={clapImg} alt="" /> {clap} </h6>
+          </button>
         </div>
       </div>
       <div className="blog-post mx-auto col-lg-4 col-md-6 col-sm-12">
@@ -41,8 +59,12 @@ const Blog = () => {
           porro...
         </p>
         <div className="blog-post-icons d-flex">
-          <h6 className="d-flex me-1"><img src={comment} alt="" /> 0 </h6>
-          <h6 className="d-flex"><img src={clap} alt="" /> 0 </h6>
+          <button>
+          <h6 className="d-flex me-1"><img src={commentImg} alt="" /> {comment} </h6>
+          </button>
+          <button onClick={incrementClap} className="d-flex">
+          <h6 className="d-flex"><img src={clapImg} alt="" /> {clap} </h6>
+          </button>
         </div>
       </div>
     </div>

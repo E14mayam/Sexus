@@ -241,17 +241,21 @@ $secondary-font: "Bodoni";
     }
   }
   .blog-post-icons{
-    h6{
-      padding: 10px 10px;
-      box-shadow: 3px 3px 10px rgb(202, 202, 202);
-      align-items: center;
-      text-transform: uppercase;
-      font-weight: 100;
-      font-size: 12px;
-      img{
-        width: 15px;
-        height: 15px;
-        margin: 0 5px;
+    button{
+      outline: none;
+      border: none;
+      h6{
+        padding: 10px 10px;
+        box-shadow: 3px 3px 10px rgb(202, 202, 202);
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: 100;
+        font-size: 12px;
+        img{
+          width: 15px;
+          height: 15px;
+          margin: 0 5px;
+        }
       }
     }
   }
