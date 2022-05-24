@@ -70,6 +70,7 @@ $secondary-font: "Bodoni";
 
 //Header
 .Header {
+  transition: 0.8s all;
   .title {
     font-size: 3rem;
     font-family: $secondary-font;
@@ -153,12 +154,10 @@ $secondary-font: "Bodoni";
       flex-direction: column;
       background: none;
       background-color: #21212186;
-      transition: 0.7s;
       animation: growDown 400ms ease-in-out forwards;
       transform-origin: top center;
       a {
         font-size: 20px;
-        font-weight: 200;
         margin: 10px 0px;
         border-radius: 2px;
         &:hover{
@@ -169,7 +168,7 @@ $secondary-font: "Bodoni";
   }
 }
 
-//Navbar animation
+//Navbar animation growDown
 @keyframes growDown {
   0% {
       transform: scaleY(0)

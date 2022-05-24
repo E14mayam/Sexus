@@ -60,6 +60,11 @@
   max-width: 300px;
 }
 
+.Header {
+  -webkit-transition: 0.8s all;
+  transition: 0.8s all;
+}
+
 .Header .title {
   font-size: 3rem;
   font-family: "Bodoni";
@@ -163,8 +168,6 @@
             flex-direction: column;
     background: none;
     background-color: #21212186;
-    -webkit-transition: 0.7s;
-    transition: 0.7s;
     -webkit-animation: growDown 400ms ease-in-out forwards;
             animation: growDown 400ms ease-in-out forwards;
     -webkit-transform-origin: top center;
@@ -172,7 +175,6 @@
   }
   .Header .Navbar.active a {
     font-size: 20px;
-    font-weight: 200;
     margin: 10px 0px;
     border-radius: 2px;
   }
