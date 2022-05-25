@@ -33,7 +33,7 @@ const Header = () => {
           <img src={userImage} alt="" />
         </div>
       </header>
-      <h3 className="h3 title mt-5">Erotic Tips</h3>
+      <h3 className="h3 title mt-5">Sexus</h3>
       <h6 className="headLine h6">IMPROVE YOUR SEX LIFE</h6>
     </div>
   );
