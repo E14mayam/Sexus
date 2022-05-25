@@ -271,7 +271,7 @@
 
 .blog .blog-post p {
   font-weight: 100;
-  font-size: 13apx;
+  font-size: 13px;
 }
 
 .blog .blog-post img {
@@ -286,7 +286,7 @@
 
 .blog .blog-post-icons button h6 {
   padding: 10px 10px;
-  background-color: rgba(196, 196, 196, 0.295);
+  background-color: rgba(196, 196, 196, 0.336);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -296,7 +296,7 @@
 }
 
 .blog .blog-post-icons button h6 img {
-  background-color: rgba(196, 196, 196, 0.295);
+  background-color: rgba(196, 196, 196, 0.336);
   width: 15px;
   height: 15px;
   margin: 0 5px;
