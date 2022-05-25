@@ -1,6 +1,4 @@
 //typefaces
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 @font-face {
   font-family: "Bodoni";
   font-display: swap;
@@ -152,13 +150,15 @@ $secondary-font: "Bodoni";
       right: 0;
       flex-direction: column;
       background: none;
-      background-color: #21212186;
+      background-color: $background-color;
       animation: growDown 400ms ease-in-out forwards;
       transform-origin: top center;
       a {
         font-size: 20px;
         margin: 10px 0px;
         border-radius: 2px;
+        background: none;
+        text-decoration: overline $accent-color;
         &:hover{
           box-shadow: none;
         }

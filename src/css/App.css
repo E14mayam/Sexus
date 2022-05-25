@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @font-face {
   font-family: "Bodoni";
   font-display: swap;
@@ -162,7 +161,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     background: none;
-    background-color: #21212186;
+    background-color: #f6f6f6;
     -webkit-animation: growDown 400ms ease-in-out forwards;
             animation: growDown 400ms ease-in-out forwards;
     -webkit-transform-origin: top center;
@@ -172,6 +171,9 @@
     font-size: 20px;
     margin: 10px 0px;
     border-radius: 2px;
+    background: none;
+    -webkit-text-decoration: overline #d9cab3;
+            text-decoration: overline #d9cab3;
   }
   .Header .Navbar.active a:hover {
     -webkit-box-shadow: none;
