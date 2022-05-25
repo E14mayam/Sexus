@@ -265,6 +265,7 @@
 
 .blog .blog-post h5 {
   font-weight: 400;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
@@ -285,8 +286,7 @@
 
 .blog .blog-post-icons button h6 {
   padding: 10px 10px;
-  -webkit-box-shadow: 3px 3px 10px #cacaca;
-          box-shadow: 3px 3px 10px #cacaca;
+  background-color: rgba(196, 196, 196, 0.295);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -296,6 +296,7 @@
 }
 
 .blog .blog-post-icons button h6 img {
+  background-color: rgba(196, 196, 196, 0.295);
   width: 15px;
   height: 15px;
   margin: 0 5px;
