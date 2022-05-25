@@ -21,7 +21,7 @@ const Blog = () => {
     <div className="blog content container mx-auto row row-cols-3 mt-5">
       <div className="blog-post mx-auto col-lg-4 col-md-6 col-sm-12">
         <img src={image1} alt={placeholderImg} />
-        <h5 className="h5 py-2">Best Kissing Practices</h5>
+        <h5 className="h5 py-1">Best Kissing Practices</h5>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
           porro...
@@ -37,7 +37,7 @@ const Blog = () => {
       </div>
       <div className="blog-post mx-auto col-lg-4 col-md-6 col-sm-12">
         <img src={image2} alt={placeholderImg} />
-        <h5 className="h5 py-2">Best Kissing Practices</h5>
+        <h5 className="h5 py-1">Best Kissing Practices</h5>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
           porro...
@@ -53,7 +53,7 @@ const Blog = () => {
       </div>
       <div className="blog-post mx-auto col-lg-4 col-md-6 col-sm-12">
         <img src={image3} alt={placeholderImg} />
-        <h5 className="h5 py-2">Best Kissing Practices</h5>
+        <h5 className="h5 py-1">Best Kissing Practices</h5>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
           porro...
