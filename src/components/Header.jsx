@@ -11,21 +11,19 @@ const Header = () => {
     <div className="Header py-4 d-flex flex-column px-3">
       <header className="container d-flex justify-content-between py-2 px-3">
         <nav className={`Navbar ${exit ? "active" : ""} d-${exit ? "flex" : "none"} d-lg-flex d-md-flex d-sm-${exit ? "flex" : "none"}`}>
-          <Link to="/" onClick={handleToggler} className="h6 mx-2">
-            Home
-          </Link>
-          <Link to="/Blog" onClick={handleToggler}  className="h6 mx-2">
-            Blog
-          </Link>
-          <Link to="/Forums" onClick={handleToggler}  className="h6 mx-2">
-            Forums
+          <Link to="/" onClick={handleToggler}  className="h6 mx-2">
+            Stories
           </Link>
           <Link to="/DarkSecrets" onClick={handleToggler}  className="h6 mx-2">
             Dark Secrets
           </Link>
+          <Link to="/Forums" onClick={handleToggler}  className="h6 mx-2">
+            Forums
+          </Link>
           <Link to="/About" onClick={handleToggler}  className="h6 mx-2">
             About
           </Link>
+          <a href="somewhere.com" className="h6 mx-2 auth mt-5 mt-lg-0 mt-md-0 mt-sm-5">Sign Up</a>
         </nav>
         <button
           className={`headerBtn ${exit ? "active" : ""} d-block d-lg-none d-md-none d-sm-block`}
@@ -33,7 +31,6 @@ const Header = () => {
         ></button>
         <div className="User d-flex">
           <img src={userImage} alt="" />
-          <h5 className="h6 m-0">Sign Up</h5>
         </div>
       </header>
       <h3 className="h3 title mt-5">Erotic Tips</h3>

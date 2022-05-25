@@ -153,6 +153,10 @@ $secondary-font: "Bodoni";
       background-color: $background-color;
       animation: growDown 400ms ease-in-out forwards;
       transform-origin: top center;
+      .auth{
+        text-decoration: none;
+        border: 2px solid $accent-color;
+      }
       a {
         font-size: 20px;
         margin: 10px 0px;

@@ -8,7 +8,7 @@ import clapImg from "../icons/clap.svg"
 
 const Blog = () => {
 
-  const [comment, setComment] = useState(0)
+  const comment = useState(0)
   const [clap, setClap] = useState(0)
 
   function incrementClap(){

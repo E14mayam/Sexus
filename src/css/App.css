@@ -167,6 +167,10 @@
     -webkit-transform-origin: top center;
             transform-origin: top center;
   }
+  .Header .Navbar.active .auth {
+    text-decoration: none;
+    border: 2px solid #d9cab3;
+  }
   .Header .Navbar.active a {
     font-size: 20px;
     margin: 10px 0px;
