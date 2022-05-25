@@ -265,13 +265,13 @@
 
 .blog .blog-post h5 {
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .blog .blog-post p {
   font-weight: 100;
-  font-size: 15px;
+  font-size: 13apx;
 }
 
 .blog .blog-post img {
