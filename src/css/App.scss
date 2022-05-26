@@ -4,7 +4,7 @@
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/BodoniModa36pt-Black.ttf") format("truetype");
+  src: url("../fonts/CyreneRegular.otf") format("truetype");
 }
 
 @font-face {
@@ -12,7 +12,7 @@
   font-display: swap;
   font-weight: 100;
   font-style: normal;
-  src: url("../fonts/AlbertSans-Light.ttf") format("truetype");
+  src: url("../fonts/AlbertSans-Thin.ttf") format("truetype");
 }
 
 @font-face {
@@ -20,7 +20,7 @@
   font-display: swap;
   font-weight: 200;
   font-style: normal;
-  src: url("../fonts/AlbertSans-Medium.ttf") format("truetype");
+  src: url("../fonts/AlbertSans-ExtraLight.ttf") format("truetype");
 }
 
 @font-face {
@@ -28,7 +28,7 @@
   font-display: swap;
   font-weight: 300;
   font-style: normal;
-  src: url("../fonts/AlbertSans-Regular.ttf") format("truetype");
+  src: url("../fonts/AlbertSans-Light.ttf") format("truetype");
 }
 
 @font-face {
@@ -36,13 +36,45 @@
   font-display: swap;
   font-weight: 400;
   font-style: normal;
-  src: url("../fonts/AlbertSans-ExtraBold.ttf") format("truetype");
+  src: url("../fonts/AlbertSans-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Albert Sans";
   font-display: swap;
   font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/AlbertSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/AlbertSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/AlbertSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  font-display: swap;
+  font-weight: 800;
+  font-style: normal;
+  src: url("../fonts/AlbertSans-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  font-display: swap;
+  font-weight: 900;
   font-style: normal;
   src: url("../fonts/AlbertSans-Black.ttf") format("truetype");
 }
@@ -124,7 +156,7 @@ $secondary-font: "Bodoni";
       color: $main-color;
       text-decoration: none;
       padding: 5px 10px;
-      font-weight: 400;
+      font-weight: 700;
       transition: 0.8s;
       text-transform: uppercase;
       background-color: $accent-color;
@@ -232,12 +264,14 @@ $secondary-font: "Bodoni";
     height: 400px;
     text-align: left;
     h5 {
-      font-weight: 400;
+      font-weight: 700;
+      letter-spacing: 1px;
       text-transform: uppercase;
+      padding-top: 10px;
     }
     p {
-      font-weight: 100;
-      font-size: 13px;
+      font-weight: 300;
+      font-size: 15px;
     }
     img {
       width: 100%;
@@ -253,7 +287,7 @@ $secondary-font: "Bodoni";
         background-color: rgb(216, 216, 216);
         align-items: center;
         text-transform: uppercase;
-        font-weight: 100;
+        font-weight: 500;
         font-size: 12px;
         img{
           background-color: rgb(216, 216, 216);
