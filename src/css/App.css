@@ -289,35 +289,51 @@
   height: 80%;
 }
 
-.blog .blog-post {
+.blog .createBlogIcon {
+  position: fixed;
+  width: auto;
+  right: 20px;
+  bottom: 20px;
+  background-color: #d9cab3;
+  padding: 10px 10px;
+  border-radius: 50%;
+}
+
+.blog .createBlogIcon img {
+  width: 25px;
+  height: 25px;
+  background-color: #d9cab3;
+}
+
+.blog-post {
   width: 300px;
   height: 400px;
   text-align: left;
 }
 
-.blog .blog-post h5 {
+.blog-post h5 {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   padding-top: 10px;
 }
 
-.blog .blog-post p {
+.blog-post p {
   font-weight: 300;
   font-size: 15px;
 }
 
-.blog .blog-post img {
+.blog-post img {
   width: 100%;
   height: 200px;
 }
 
-.blog .blog-post-icons button {
+.blog-post .blog-post-icons button {
   outline: none;
   border: none;
 }
 
-.blog .blog-post-icons button h6 {
+.blog-post .blog-post-icons button h6 {
   padding: 7px 10px;
   background-color: #d8d8d8;
   -webkit-box-align: center;
@@ -328,10 +344,64 @@
   font-size: 12px;
 }
 
-.blog .blog-post-icons button h6 img {
+.blog-post .blog-post-icons button h6 img {
   background-color: #d8d8d8;
   width: 15px;
   height: 15px;
   margin: 0 5px;
+}
+
+.Upload h3 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 20px;
+  -webkit-text-decoration: overline #d9cab3;
+          text-decoration: overline #d9cab3;
+}
+
+.Upload form {
+  text-align: left;
+}
+
+.Upload form label {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 0px;
+}
+
+.Upload form input,
+.Upload form textarea {
+  border: 2px solid #d9cab3;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+}
+
+.Upload form input[type="file"] {
+  display: none;
+}
+
+.Upload form .coverImg {
+  background-color: #d9cab3;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.Upload button {
+  outline: none;
+  position: fixed;
+  width: auto;
+  right: 20px;
+  bottom: 20px;
+  background-color: #d9cab3;
+  padding: 10px 10px;
+  border-radius: 50%;
+}
+
+.Upload button img {
+  width: 25px;
+  height: 25px;
+  background-color: #d9cab3;
 }
 /*# sourceMappingURL=App.css.map */

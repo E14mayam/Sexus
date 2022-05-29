@@ -185,7 +185,7 @@ $secondary-font: "Bodoni";
       background-color: $background-color;
       animation: growDown 400ms ease-in-out forwards;
       transform-origin: top center;
-      .auth{
+      .auth {
         text-decoration: none;
         border: 2px solid $accent-color;
       }
@@ -195,7 +195,7 @@ $secondary-font: "Bodoni";
         border-radius: 2px;
         background: none;
         text-decoration: overline $accent-color;
-        &:hover{
+        &:hover {
           box-shadow: none;
         }
       }
@@ -206,13 +206,13 @@ $secondary-font: "Bodoni";
 //Navbar animation growDown
 @keyframes growDown {
   0% {
-      transform: scaleY(0)
+    transform: scaleY(0);
   }
   80% {
-      transform: scaleY(1.1)
+    transform: scaleY(1.1);
   }
   100% {
-      transform: scaleY(1)
+    transform: scaleY(1);
   }
 }
 
@@ -259,37 +259,53 @@ $secondary-font: "Bodoni";
 
 //Blog Section
 .blog {
-  .blog-post {
-    width: 300px;
-    height: 400px;
-    text-align: left;
-    h5 {
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding-top: 10px;
-    }
-    p {
-      font-weight: 300;
-      font-size: 15px;
-    }
+ 
+  .createBlogIcon {
+    position: fixed;
+    width: auto;
+    right: 20px;
+    bottom: 20px;
+    background-color: $accent-color;
+    padding: 10px 10px;
+    border-radius: 50%;
     img {
-      width: 100%;
-      height: 200px;
+      width: 25px;
+      height: 25px;
+      background-color: $accent-color;
     }
   }
-  .blog-post-icons{
-    button{
+}
+
+.blog-post {
+  width: 300px;
+  height: 400px;
+  text-align: left;
+  h5 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-top: 10px;
+  }
+  p {
+    font-weight: 300;
+    font-size: 15px;
+  }
+  img {
+    width: 100%;
+    height: 200px;
+  }
+  .blog-post-icons {
+    button {
       outline: none;
       border: none;
-      h6{
+      h6 {
         padding: 7px 10px;
         background-color: rgb(216, 216, 216);
         align-items: center;
         text-transform: uppercase;
         font-weight: 500;
         font-size: 12px;
-        img{
+        img {
           background-color: rgb(216, 216, 216);
           width: 15px;
           height: 15px;
@@ -300,3 +316,50 @@ $secondary-font: "Bodoni";
   }
 }
 
+.Upload {
+  h3 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: overline $accent-color;
+  }
+  form {
+    text-align: left;
+    label {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 10px 0px;
+    }
+    input,
+    textarea {
+      border: 2px solid $accent-color;
+      outline: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      margin-bottom: 15px;
+    }
+    input[type="file"] {
+      display: none;
+    }
+    .coverImg{
+      background-color: #d9cab3;
+      text-align: center;
+      border-radius: 5px;
+    }
+  }
+  button{
+    outline: none;
+    position: fixed;
+    width: auto;
+    right: 20px;
+    bottom: 20px;
+    background-color: $accent-color;
+    padding: 10px 10px;
+    border-radius: 50%;
+    img {
+      width: 25px;
+      height: 25px;
+      background-color: $accent-color;
+    }
+  }
+}
