@@ -258,13 +258,13 @@ $secondary-font: "Bodoni";
 }
 
 //Blog Section
-.blog {
+.blog {s
  
   .createBlogIcon {
     position: fixed;
     width: auto;
     right: 20px;
-    bottom: 20px;
+    bottom: 15px;
     background-color: $accent-color;
     padding: 10px 10px;
     border-radius: 50%;
@@ -345,7 +345,7 @@ $secondary-font: "Bodoni";
       background-color: #d9cab3;
       text-align: center;
       border-radius: 5px;
-      width: 150px;
+      width: 130px;
     }
   }
   button{
@@ -353,7 +353,7 @@ $secondary-font: "Bodoni";
     position: fixed;
     width: auto;
     right: 20px;
-    bottom: 20px;
+    bottom: 15px;
     background-color: $accent-color;
     padding: 10px 10px;
     border-radius: 50%;
