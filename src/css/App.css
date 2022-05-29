@@ -289,8 +289,7 @@
   height: 80%;
 }
 
-.blog s
-.createBlogIcon {
+.blog .createBlogIcon {
   position: fixed;
   width: auto;
   right: 20px;
@@ -300,8 +299,7 @@
   border-radius: 50%;
 }
 
-.blog s
-.createBlogIcon img {
+.blog .createBlogIcon img {
   width: 25px;
   height: 25px;
   background-color: #d9cab3;
