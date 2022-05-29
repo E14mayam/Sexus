@@ -263,8 +263,8 @@ $secondary-font: "Bodoni";
   .createBlogIcon {
     position: fixed;
     width: auto;
-    right: 15px;
-    bottom: 15px;
+    right: 20px;
+    bottom: 20px;
     background-color: $accent-color;
     padding: 10px 10px;
     border-radius: 50%;
@@ -345,14 +345,15 @@ $secondary-font: "Bodoni";
       background-color: #d9cab3;
       text-align: center;
       border-radius: 5px;
+      width: 150px;
     }
   }
   button{
     outline: none;
     position: fixed;
     width: auto;
-    right: 15px;
-    bottom: 15spx;
+    right: 20px;
+    bottom: 20px;
     background-color: $accent-color;
     padding: 10px 10px;
     border-radius: 50%;
