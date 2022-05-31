@@ -14,15 +14,6 @@ const SignUp = () => {
       if (authUser) {
         console.log(authUser);
         setUser(authUser);
-
-        if (authUser.displayName) {
-          //don't update user name
-        } else {
-          //if someone is created
-          return authUser.updateProfile({
-            displayName: username,
-          });
-        }
       } else {
         setUser(null);
       }
@@ -37,6 +28,11 @@ const SignUp = () => {
     event.preventDefault();
     auth
       .createUserWithEmailAndPassword(email, password)
+      .then((authUser) => {
+        return authUser.user.updateProfile({
+          displayName: username,
+        });
+      })
       .catch((err) => alert(err.message));
   };
 
@@ -45,11 +41,26 @@ const SignUp = () => {
       <h3 className="h3 mb-5">Sign Up</h3>
       <form className="d-flex flex-column px-5">
         <label htmlFor="userName">Username</label>
-        <input type="text" name="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+        <input
+          type="text"
+          name="username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
         <label htmlFor="email">Email</label>
-        <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input
+          type="email"
+          name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
         <label htmlFor="password">Password</label>
-        <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input
+          type="password"
+          name="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
         <Link to="/" onClick={signUpUser}>
           <img src={postBlogImg} alt="" />
         </Link>
