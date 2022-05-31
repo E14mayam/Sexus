@@ -7,6 +7,8 @@ import About from "./components/About";
 import Forums from "./components/Forums";
 import Header from "./components/Header";
 import Blogcreate from "./components/Blogcreate";
+import SignUp from "./components/SignUp";
+
 
 function App() {
 
@@ -20,6 +22,7 @@ function App() {
         <Route path="/DarkSecrets" element={<DarkSecrets />} />
         <Route path="/About" element={<About />} />
         <Route path="/Blogcreate" element={<Blogcreate />} />
+        <Route path="/Signup" element={<SignUp />} />
       </Routes>
     </div>
   );

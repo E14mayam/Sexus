@@ -98,6 +98,22 @@ $secondary-font: "Bodoni";
   }
 }
 
+@mixin links {
+  outline: none;
+  position: fixed;
+  width: auto;
+  right: 20px;
+  bottom: 15px;
+  background-color: $accent-color;
+  padding: 10px 10px;
+  border-radius: 50%;
+  img {
+    width: 25px;
+    height: 25px;
+    background-color: $accent-color;
+  }
+}
+
 //Header
 .Header {
   .title {
@@ -345,22 +361,11 @@ $secondary-font: "Bodoni";
       background-color: #d9cab3;
       text-align: center;
       border-radius: 5px;
-      width: 130px;
+      padding: 5px 5px;
+      width: 150px;
     }
   }
-  button{
-    outline: none;
-    position: fixed;
-    width: auto;
-    right: 20px;
-    bottom: 15px;
-    background-color: $accent-color;
-    padding: 10px 10px;
-    border-radius: 50%;
-    img {
-      width: 25px;
-      height: 25px;
-      background-color: $accent-color;
-    }
+  button, a{
+    @include links();
   }
 }

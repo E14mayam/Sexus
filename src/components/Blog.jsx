@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import createBlogImg from "../icons/plus.svg";
 import BlogItems from "./BlogItems";
-// import image1 from "../assets/image1.jpg";
 import { db } from "./firebase";
 
 const Blog = () => {
@@ -10,13 +9,13 @@ const Blog = () => {
 
   useEffect(() => {
     db.collection("post-data").onSnapshot((snapshot) => {
-      setPosts(snapshot.docs.map(doc => doc.data()));
+      setPosts(snapshot.docs.map((doc) => doc.data()));
     });
   }, []);
 
   return (
     <div className="blog content container mx-auto row row-cols-3 mt-5">
-      {posts.map((post) => (
+      {posts.map(( post) => (
         <BlogItems
           title={post.title}
           subTitle={post.subTitle}

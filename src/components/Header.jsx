@@ -23,7 +23,7 @@ const Header = () => {
           <Link to="/About" onClick={handleToggler}  className="h6 mx-2">
             About
           </Link>
-          <a href="somewhere.com" className="h6 mx-2 auth mt-5 mt-lg-0 mt-md-0 mt-sm-5">Sign Up</a>
+          <Link to="/Signup" onClick={handleToggler} className="h6 mx-2 auth mt-5 mt-lg-0 mt-md-0 mt-sm-5">Sign Up</Link>
         </nav>
         <button
           className={`headerBtn ${exit ? "active" : ""} d-block d-lg-none d-md-none d-sm-block`}
