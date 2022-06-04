@@ -1,5 +1,5 @@
 import React from "react";
-import postBlogImg from "../icons/arrow-right.svg"
+
 
 const Blogcreate = () => {
   return (
@@ -11,9 +11,8 @@ const Blogcreate = () => {
         <input type="text" name="subtitle" id="subTitle" />
         <label htmlFor="article">Article</label>
         <textarea name="article" id="" cols="30" rows="10"></textarea>
-        <label htmlFor="coverImg" className="coverImg">Drap and drop here <br /> or <br /> browse cover image</label>
+        <label htmlFor="coverImg" className="coverImg">Browse cover image</label>
         <input type="file" accept=".jpg,.jpeg,.png,.svg" name="coverImg" id="coverImg" />
-
         <button>
          Upload
         </button>

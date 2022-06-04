@@ -12,38 +12,24 @@ const SignUp = () => {
       if (authUser) {
         //user has logged in
         setUser(authUser);
-        if(authUser.displayName){
+        if (authUser.displayName) {
           //don't update
-        }
-        else{
+        } else {
           //create new user
           return authUser.updateProfile({
             displayName: username,
-          })
+          });
         }
-
       } else {
         //user has logged out
         setUser(null);
       }
-
-
     });
     return () => {
       //perform cleanup actions
       unsubscribe();
     };
   }, [user, username]);
-
-  // try {
-  //   const authUser = await auth.createUserWithEmailAndPassword(
-  //     email,
-  //     password
-  //   );
-  //   console.log('Good boy', authUser);
-  // } catch (error) {
-  //   console.log("My error::: ", error, error.message);
-  // }
 
   const signUpUser = (event) => {
     event.preventDefault();
@@ -81,9 +67,7 @@ const SignUp = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button onClick={signUpUser}>
-          Sign Up
-        </button>
+        <button onClick={signUpUser}>SignUp</button>
       </form>
     </div>
   );
