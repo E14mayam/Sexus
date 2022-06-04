@@ -1,94 +1,14 @@
-//typefaces
-@font-face {
-  font-family: "Bodoni";
-  font-display: swap;
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/CyreneRegular.otf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 100;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-Thin.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 200;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-ExtraLight.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 300;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 400;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-Medium.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 500;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 600;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-SemiBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 700;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 800;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-ExtraBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 900;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-Black.ttf") format("truetype");
-}
+//typeface
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 //colors and fonts
 $main-color: #212121;
 $secondary-color: #6d9886;
-$accent-color: #d9cab3;
-$background-color: #f6f6f6;
-$secondary-font: "Bodoni";
+$background-color: #fff;
 
 // Global Styling
 * {
-  font-family: "Albert Sans";
+  font-family: "Poppins";
   padding: 0;
   border: 0;
   box-sizing: border-box;
@@ -100,34 +20,23 @@ $secondary-font: "Bodoni";
 
 @mixin links {
   outline: none;
-  position: fixed;
-  width: auto;
-  right: 20px;
-  bottom: 15px;
-  background-color: $accent-color;
-  padding: 10px 10px;
-  border-radius: 50%;
-  img {
-    width: 25px;
-    height: 25px;
-    background-color: $accent-color;
-  }
+  text-transform: uppercase;
+  background-color: $main-color;
+  color: $background-color;
+  width: 150px;
+  padding: 10px 0px;
+  margin-top: 30px;
 }
 
 //Header
 .Header {
-  .title {
-    font-size: 3rem;
-    font-family: $secondary-font;
-    color: $main-color;
-  }
-  h6 {
-    font-size: 10px;
-    letter-spacing: 3px;
+  h4 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
   }
   .headerBtn {
     background: url("../icons/menu.svg");
-    background-color: $accent-color;
     outline: none;
     border: none;
     background-size: contain;
@@ -141,79 +50,59 @@ $secondary-font: "Bodoni";
   //User Info
   .User {
     align-items: center;
-    background-color: $accent-color;
 
     img {
       width: 25px;
       height: 25px;
       margin-right: 10px;
-      background-color: $accent-color;
+
       cursor: pointer;
     }
     h5 {
-      background-color: $accent-color;
       font-weight: 400;
       text-transform: uppercase;
       cursor: pointer;
     }
   }
-  //Header
-  header {
-    background-color: $accent-color;
-    align-items: center;
-    border-radius: 3px;
-  }
   //Navbar
   .Navbar {
-    background-color: $accent-color;
+    z-index: 2;
     display: flex;
     align-items: center;
+  }
+  .Navbar.active {
+    display: block;
+    top: 70px;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: none;
+    background-color: $background-color;
+    animation: growDown 400ms ease-in-out forwards;
+    transform-origin: top center;
+
+    .auth {
+      text-decoration: none;
+      color: $background-color;
+      background-color: $main-color;
+      padding: 10px 25px;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
     a {
       color: $main-color;
       text-decoration: none;
-      padding: 5px 10px;
-      font-weight: 700;
-      transition: 0.8s;
       text-transform: uppercase;
-      background-color: $accent-color;
-      &:hover {
-        color: $accent-color;
-        box-shadow: inset 300px 0px $main-color;
-      }
-    }
-  }
-}
-
-//Navbar-sm
-@media (max-width: 768px) {
-  .Header {
-    .Navbar.active {
-      display: block;
-      top: 70px;
-      position: fixed;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      left: 0;
-      right: 0;
-      flex-direction: column;
+      font-size: 20px;
+      margin: 10px 0px;
       background: none;
-      background-color: $background-color;
-      animation: growDown 400ms ease-in-out forwards;
-      transform-origin: top center;
-      .auth {
-        text-decoration: none;
-        border: 2px solid $accent-color;
-      }
-      a {
-        font-size: 20px;
-        margin: 10px 0px;
-        border-radius: 2px;
-        background: none;
-        text-decoration: overline $accent-color;
-        &:hover {
-          box-shadow: none;
-        }
+      &:hover {
+        box-shadow: none;
       }
     }
   }
@@ -275,19 +164,17 @@ $secondary-font: "Bodoni";
 
 //Blog Section
 .blog {
- 
   .createBlogIcon {
     position: fixed;
     width: auto;
     right: 20px;
     bottom: 15px;
-    background-color: $accent-color;
     padding: 10px 10px;
     border-radius: 50%;
+    box-shadow: 3px 3px 10px rgb(219, 219, 219);
     img {
       width: 25px;
       height: 25px;
-      background-color: $accent-color;
     }
   }
 }
@@ -333,12 +220,7 @@ $secondary-font: "Bodoni";
 }
 
 .Upload {
-  h3 {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 20px;
-    text-decoration: overline $accent-color;
-  }
+  margin-top: 110px;
   form {
     text-align: left;
     label {
@@ -348,24 +230,24 @@ $secondary-font: "Bodoni";
     }
     input,
     textarea {
-      border: 2px solid $accent-color;
       outline: none;
-      border-radius: 5px;
       padding: 5px 10px;
       margin-bottom: 15px;
+      border-bottom: 1px solid $main-color;
     }
     input[type="file"] {
       display: none;
     }
+
     .coverImg{
-      background-color: #d9cab3;
-      text-align: center;
-      border-radius: 5px;
-      padding: 5px 5px;
-      width: 150px;
+      background-color: #ffffff;
+      border: 1px dashed $main-color;
+      padding: 10px 10px;
+      text-align: center
     }
   }
-  button, a{
+  button,
+  a{
     @include links();
   }
 }

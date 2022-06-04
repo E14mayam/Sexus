@@ -1,110 +1,25 @@
-@font-face {
-  font-family: "Bodoni";
-  font-display: swap;
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/CyreneRegular.otf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 100;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-Thin.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 200;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-ExtraLight.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 300;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 400;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-Medium.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 500;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 600;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-SemiBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 700;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 800;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-ExtraBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Albert Sans";
-  font-display: swap;
-  font-weight: 900;
-  font-style: normal;
-  src: url("../fonts/AlbertSans-Black.ttf") format("truetype");
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 * {
-  font-family: "Albert Sans";
+  font-family: "Poppins";
   padding: 0;
   border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #f6f6f6;
+  background-color: #fff;
 }
 
 * .placeholderImg {
   max-width: 300px;
 }
 
-.Header .title {
-  font-size: 3rem;
-  font-family: "Bodoni";
-  color: #212121;
-}
-
-.Header h6 {
-  font-size: 10px;
-  letter-spacing: 3px;
+.Header h4 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .Header .headerBtn {
   background: url("../icons/menu.svg");
-  background-color: #d9cab3;
   outline: none;
   border: none;
   background-size: contain;
@@ -121,34 +36,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #d9cab3;
 }
 
 .Header .User img {
   width: 25px;
   height: 25px;
   margin-right: 10px;
-  background-color: #d9cab3;
   cursor: pointer;
 }
 
 .Header .User h5 {
-  background-color: #d9cab3;
   font-weight: 400;
   text-transform: uppercase;
   cursor: pointer;
 }
 
-.Header header {
-  background-color: #d9cab3;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 3px;
-}
-
 .Header .Navbar {
-  background-color: #d9cab3;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,64 +61,52 @@
           align-items: center;
 }
 
-.Header .Navbar a {
+.Header .Navbar.active {
+  display: block;
+  top: 70px;
+  position: fixed;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: none;
+  background-color: #fff;
+  -webkit-animation: growDown 400ms ease-in-out forwards;
+          animation: growDown 400ms ease-in-out forwards;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+}
+
+.Header .Navbar.active .auth {
+  text-decoration: none;
+  color: #fff;
+  background-color: #212121;
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.Header .Navbar.active a {
   color: #212121;
   text-decoration: none;
-  padding: 5px 10px;
-  font-weight: 700;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
   text-transform: uppercase;
-  background-color: #d9cab3;
+  font-size: 20px;
+  margin: 10px 0px;
+  background: none;
 }
 
-.Header .Navbar a:hover {
-  color: #d9cab3;
-  -webkit-box-shadow: inset 300px 0px #212121;
-          box-shadow: inset 300px 0px #212121;
-}
-
-@media (max-width: 768px) {
-  .Header .Navbar.active {
-    display: block;
-    top: 70px;
-    position: fixed;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100vh;
-    left: 0;
-    right: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background: none;
-    background-color: #f6f6f6;
-    -webkit-animation: growDown 400ms ease-in-out forwards;
-            animation: growDown 400ms ease-in-out forwards;
-    -webkit-transform-origin: top center;
-            transform-origin: top center;
-  }
-  .Header .Navbar.active .auth {
-    text-decoration: none;
-    border: 2px solid #d9cab3;
-  }
-  .Header .Navbar.active a {
-    font-size: 20px;
-    margin: 10px 0px;
-    border-radius: 2px;
-    background: none;
-    -webkit-text-decoration: overline #d9cab3;
-            text-decoration: overline #d9cab3;
-  }
-  .Header .Navbar.active a:hover {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
+.Header .Navbar.active a:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 @-webkit-keyframes growDown {
@@ -294,15 +186,15 @@
   width: auto;
   right: 20px;
   bottom: 15px;
-  background-color: #d9cab3;
   padding: 10px 10px;
   border-radius: 50%;
+  -webkit-box-shadow: 3px 3px 10px #dbdbdb;
+          box-shadow: 3px 3px 10px #dbdbdb;
 }
 
 .blog .createBlogIcon img {
   width: 25px;
   height: 25px;
-  background-color: #d9cab3;
 }
 
 .blog-post {
@@ -351,12 +243,8 @@
   margin: 0 5px;
 }
 
-.Upload h3 {
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 20px;
-  -webkit-text-decoration: overline #d9cab3;
-          text-decoration: overline #d9cab3;
+.Upload {
+  margin-top: 110px;
 }
 
 .Upload form {
@@ -371,11 +259,10 @@
 
 .Upload form input,
 .Upload form textarea {
-  border: 2px solid #d9cab3;
   outline: none;
-  border-radius: 5px;
   padding: 5px 10px;
   margin-bottom: 15px;
+  border-bottom: 1px solid #212121;
 }
 
 .Upload form input[type="file"] {
@@ -383,27 +270,20 @@
 }
 
 .Upload form .coverImg {
-  background-color: #d9cab3;
-  text-align: center;
-  border-radius: 5px;
-  padding: 5px 5px;
-  width: 150px;
-}
-
-.Upload button, .Upload a {
-  outline: none;
-  position: fixed;
-  width: auto;
-  right: 20px;
-  bottom: 15px;
-  background-color: #d9cab3;
+  background-color: #ffffff;
+  border: 1px dashed #212121;
   padding: 10px 10px;
-  border-radius: 50%;
+  text-align: center;
 }
 
-.Upload button img, .Upload a img {
-  width: 25px;
-  height: 25px;
-  background-color: #d9cab3;
+.Upload button,
+.Upload a {
+  outline: none;
+  text-transform: uppercase;
+  background-color: #212121;
+  color: #fff;
+  width: 150px;
+  padding: 10px 0px;
+  margin-top: 30px;
 }
 /*# sourceMappingURL=App.css.map */
