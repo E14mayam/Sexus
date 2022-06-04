@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { auth } from "./firebase";
+import { auth } from "./firebase"; 
+
 
 const SignUp = () => {
+  const handleReset = () =>{
+    Array.from(document.querySelectorAll("input")).forEach(input => (input.value =""));
+    this.setState({
+      itemvalues:[{}]
+    })
+  }
+
   const [username, setUsername] = useState("");
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
@@ -67,7 +75,7 @@ const SignUp = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button onClick={signUpUser}>SignUp</button>
+        <button onClick={signUpUser && handleReset} >SignUp</button>
       </form>
     </div>
   );

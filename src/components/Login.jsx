@@ -3,6 +3,13 @@ import { auth } from "./firebase";
 
 const Login = () => {
 
+  const handleReset = () =>{
+    Array.from(document.querySelectorAll("input")).forEach(input => (input.value =""));
+    this.setState({
+      itemvalues:[{}]
+    })
+  }
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -29,7 +36,7 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button onClick={signIn}>Login</button>
+        <button onClick={signIn && handleReset}>Login</button>
       </form>
     </div>
   );
