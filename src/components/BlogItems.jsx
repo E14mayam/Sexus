@@ -17,8 +17,8 @@ const BlogItems = ({title, article, coverImg}) =>{
 
     return(
         <div className="blog-post mx-auto col-lg-4 col-md-6 col-sm-12 d-flex flex-column py-3 g-4 px-3">
-        <h5 className="h5 ">{title}</h5>
-        <div className="d-flex userInfo " >
+        <h5 className="h5">{title}</h5>
+        <div className="d-flex userInfo" >
           <img src={userImage} alt="" />
           <h6 className="h6" >username</h6>
         </div>
