@@ -3,7 +3,7 @@ import { auth } from "./firebase";
 
 
 const SignUp = () => {
-  const handleReset = () =>{
+  const handleReset = () => {
     Array.from(document.querySelectorAll("input")).forEach(input => (input.value =""));
     this.setState({
       itemvalues:[{}]
@@ -14,6 +14,7 @@ const SignUp = () => {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
