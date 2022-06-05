@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { storage, db } from "./firebase";
+import firebase from "firebase/compat/app";
 
 const Blogcreate = () => {
   const [coverImg, setCoverImage] = useState("");
@@ -7,10 +8,17 @@ const Blogcreate = () => {
   const [subTitle, setSubtitle] = useState("");
   const [article, setArticle] = useState("");
 
-  const handleUpload = () => {
+  const handleChange = (e) =>{
+    if(e.target.files[0]) {
+      setCoverImage(e.target.files[0])
+    }
+  }
+
+  const handleUpload = (e) => {
+    e.preventDefault();
     const uploadTask = storage.ref(`images/${coverImg.name}`).put(coverImg);
     uploadTask.on(
-      "state_changed",  
+      "state_changed", 
       () => {
         storage
           .ref("images")
@@ -18,11 +26,12 @@ const Blogcreate = () => {
           .getDownloadURL()
           .then((url) => {
             db.collection("post-data").add({
+              timestamp: firebase.firestore.FieldValue.serverTimestamp(),
               title: title,
               coverImg: url,
               article: article,
-              subtitle: subTitle
-            }).catch(err => console.log(err));
+              subTitle: subTitle
+            });
             setTitle("");
             setSubtitle("");
             setArticle("");
@@ -33,7 +42,7 @@ const Blogcreate = () => {
         //error function
         console.log(error);
         alert(error.message);
-      }
+      } 
     );
   };
 
@@ -45,14 +54,14 @@ const Blogcreate = () => {
           type="text"
           id="title"
           value={title}
-          onChange={(event) => setTitle(event.target.value)}
+          onChange={(e) => setTitle(e.target.value)}
         />
         <label htmlFor="subTitle">Subtitle</label>
         <input
           type="text"
           id="subTitle"
           value={subTitle}
-          onChange={(event) => setSubtitle(event.target.value)}
+          onChange={(e) => setSubtitle(e.target.value)}
         />
         <label htmlFor="article">Article</label>
         <textarea
@@ -60,7 +69,7 @@ const Blogcreate = () => {
           cols="30"
           rows="10"
           value={article}
-          onChange={(event) => setArticle(event.target.value)}
+          onChange={(e) => setArticle(e.target.value)}
         ></textarea>
         <label htmlFor="coverImg" className="coverImg">
           Browse cover image
@@ -68,8 +77,8 @@ const Blogcreate = () => {
         <input
           type="file"
           accept=".jpg,.jpeg,.png,.svg"
-          value={coverImg}
           id="coverImg"
+          onChange={handleChange}
         />
         <button onClick={handleUpload}>Upload</button>
       </form>
