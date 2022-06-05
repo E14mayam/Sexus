@@ -23,9 +23,6 @@ const Header = () => {
           <Link to="/About" onClick={handleToggler}  className="h6 mx-2">
             About
           </Link>
-          <Link to="/Modal" onClick={handleToggler}  className="h6 mx-2">
-            modal
-          </Link>
           <Link to="/Login" onClick={handleToggler} className="h6 mx-2">Login</Link>
           <Link to="/Signup" onClick={handleToggler} className="h6 mx-2 auth mt-5">Sign Up</Link>
         </nav>
