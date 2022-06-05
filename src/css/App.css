@@ -265,6 +265,10 @@
   border-bottom: 1px solid #212121;
 }
 
+.Upload form input[type="file"] {
+  display: none;
+}
+
 .Upload form .coverImg {
   background-color: #ffffff;
   border: 1px dashed #212121;

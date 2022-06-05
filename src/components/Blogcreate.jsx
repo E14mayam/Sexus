@@ -3,7 +3,7 @@ import { storage, db } from "./firebase";
 import firebase from "firebase/compat/app";
 
 const Blogcreate = () => {
-  const [coverImg, setCoverImage] = useState("");
+  const [coverImg, setCoverImage] = useState(null);
   const [title, setTitle] = useState("");
   const [subTitle, setSubtitle] = useState("");
   const [article, setArticle] = useState("");
@@ -14,8 +14,9 @@ const Blogcreate = () => {
     }
   }
 
-  const handleUpload = (e) => {
-    e.preventDefault();
+  const handleUpload = (event) => {
+    event.preventDefault();
+    
     const uploadTask = storage.ref(`images/${coverImg.name}`).put(coverImg);
     uploadTask.on(
       "state_changed", 
@@ -32,10 +33,11 @@ const Blogcreate = () => {
               article: article,
               subTitle: subTitle
             });
-            setTitle("");
-            setSubtitle("");
-            setArticle("");
+
+            setArticle('');
+            setSubtitle('');
             setCoverImage(null);
+            setTitle('');
           });
       },
       (error) => {
@@ -80,7 +82,7 @@ const Blogcreate = () => {
           id="coverImg"
           onChange={handleChange}
         />
-        <button onClick={handleUpload}>Upload</button>
+        <button type="submit" onClick={handleUpload}>Upload</button>
       </form>
     </div>
   );
