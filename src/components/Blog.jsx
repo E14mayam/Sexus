@@ -18,7 +18,7 @@ const Blog = () => {
       {posts.map(( post) => (
         <BlogItems
           title={post.title}
-          subTitle={post.subTitle}
+          article={post.article}
           coverImg={post.coverImg}
         />
       ))}

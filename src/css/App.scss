@@ -181,41 +181,19 @@ $background-color: #fff;
 
 .blog-post {
   width: 300px;
-  height: 400px;
+  height: 350px;
   text-align: left;
-  h5 {
-    font-weight: 700;
+  box-shadow: 4px 4px 10px rgb(190, 190, 190);
+  border-radius: 10px;
+  h4 {
+    font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding-top: 10px;
-  }
-  p {
-    font-weight: 300;
-    font-size: 15px;
   }
   img {
     width: 100%;
-    height: 200px;
-  }
-  .blog-post-icons {
-    button {
-      outline: none;
-      border: none;
-      h6 {
-        padding: 7px 10px;
-        background-color: rgb(216, 216, 216);
-        align-items: center;
-        text-transform: uppercase;
-        font-weight: 300;
-        font-size: 12px;
-        img {
-          background-color: rgb(216, 216, 216);
-          width: 15px;
-          height: 15px;
-          margin: 0 5px;
-        }
-      }
-    }
+    height: 50%;
+    border-radius: 5px;
   }
 }
 
@@ -235,19 +213,23 @@ $background-color: #fff;
       margin-bottom: 15px;
       border-bottom: 1px solid $main-color;
     }
-    input[type="file"]{
+    input[type="file"] {
       display: none;
     }
 
-    .coverImg{
+    .coverImg {
       background-color: #ffffff;
       border: 1px dashed $main-color;
       padding: 10px 10px;
-      text-align: center
+      text-align: center;
     }
   }
   button,
-  a{
+  a {
     @include links();
   }
+}
+
+.clickme{
+  background-color: $main-color;
 }

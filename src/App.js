@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import Blogcreate from "./components/Blogcreate";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
+import BasicModal from "./components/Modal";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Blog />} />
+        <Route path="/modal" element={<BasicModal />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Forums" element={<Forums />} />
         <Route path="/DarkSecrets" element={<DarkSecrets />} />

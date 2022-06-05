@@ -5,10 +5,9 @@ import firebase from "firebase/compat/app";
 const Blogcreate = () => {
   const [coverImg, setCoverImage] = useState(null);
   const [title, setTitle] = useState("");
-  const [subTitle, setSubtitle] = useState("");
   const [article, setArticle] = useState("");
 
-  const handleChange = (e) =>{
+  const handleChange = (e) => {
     if(e.target.files[0]) {
       setCoverImage(e.target.files[0])
     }
@@ -31,14 +30,11 @@ const Blogcreate = () => {
               title: title,
               coverImg: url,
               article: article,
-              subTitle: subTitle
             });
-
-            setArticle('');
-            setSubtitle('');
+          });
+          setArticle('');
             setCoverImage(null);
             setTitle('');
-          });
       },
       (error) => {
         //error function
@@ -57,13 +53,6 @@ const Blogcreate = () => {
           id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-        />
-        <label htmlFor="subTitle">Subtitle</label>
-        <input
-          type="text"
-          id="subTitle"
-          value={subTitle}
-          onChange={(e) => setSubtitle(e.target.value)}
         />
         <label htmlFor="article">Article</label>
         <textarea
