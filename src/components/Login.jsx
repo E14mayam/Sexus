@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { auth } from "./firebase";
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+// import Box from '@mui/material/Box';
+// import Typography from '@mui/material/Typography';
+// import Modal from '@mui/material/Modal';
 
 const Login = () => {
   const handleReset = () => {
@@ -15,9 +15,9 @@ const Login = () => {
   };
 
 
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  // const [open, setOpen] = React.useState(false);
+  // const handleOpen = () => setOpen(true);
+  // const handleClose = () => setOpen(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -29,17 +29,17 @@ const Login = () => {
       .catch((err) => console.log(err));
   };
 
-  const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-  };
+  // const style = {
+  //   position: 'absolute',
+  //   top: '50%',
+  //   left: '50%',
+  //   transform: 'translate(-50%, -50%)',
+  //   width: 400,
+  //   bgcolor: 'background.paper',
+  //   border: '2px solid #000',
+  //   boxShadow: 24,
+  //   p: 4,
+  // };
 
   return (
     <div className="Upload Signup container mx-auto mb-3">
@@ -58,9 +58,9 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button onClick={signIn && handleReset && handleOpen }>Login</button>
+        <button onClick={signIn && handleReset}>Login</button>
       </form>
-      <div>
+      {/* <div>
 
       <Modal
         open={open}
@@ -77,7 +77,7 @@ const Login = () => {
           </Typography>
         </Box>
       </Modal>
-    </div>
+    </div> */}
     </div>
   );
 };
