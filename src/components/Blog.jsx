@@ -8,7 +8,7 @@ const Blog = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    db.collection("post-data").onSnapshot((snapshot) => {
+    db.collection("post-data").orderBy('timestamp').onSnapshot((snapshot) => {
       setPosts(snapshot.docs.map((doc) => doc.data()));
     });
   }, []);
