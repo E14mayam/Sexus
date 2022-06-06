@@ -26,7 +26,7 @@ const BlogItems = ({ title, coverImg, article, timestamp }) => {
       });
     }
     getCurrentTime();
-  }, []);
+  });
 
   return (
     <Link
