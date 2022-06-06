@@ -56,6 +56,7 @@ const SignUp = () => {
           name="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          placeholder="Enter a username"
         />
         <label htmlFor="email">Email</label>
         <input
@@ -63,6 +64,7 @@ const SignUp = () => {
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          placeholder="example@.gmail.com"
         />
         <label htmlFor="password">Password</label>
         <input
@@ -70,6 +72,7 @@ const SignUp = () => {
           name="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          placeholder="Enter a password"
         />
         <button onClick={signUpUser}>SignUp</button>
       </form>
