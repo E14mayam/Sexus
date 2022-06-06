@@ -3,10 +3,7 @@ import placeholderImg from "../assets/17.png"
 
 const Article = () => {
     return(
-        <div>
-            <img src={placeholderImg} alt="" />
-           
-        </div>
+        <div className="container"> <img src={placeholderImg} alt="" className="placeholderImg"/></div>
     )
 }
 
