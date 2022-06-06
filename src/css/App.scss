@@ -2,9 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 //colors and fonts
-$main-color: #212121;
-$secondary-color: #6d9886;
-$background-color: #fff;
+$main-color: #393939;
+$secondary-color: #f03e3e;
+$background-color: #fcfbf6;
+$highlight-color: #777;
 
 // Global Styling
 * {
@@ -14,14 +15,14 @@ $background-color: #fff;
   box-sizing: border-box;
   background-color: $background-color;
   .placeholderImg {
-    max-width: 300px;
+    max-width: 350px;
   }
 }
 
 @mixin links {
   outline: none;
   text-transform: uppercase;
-  background-color: $main-color;
+  background-color: $secondary-color;
   color: $background-color;
   width: 150px;
   padding: 10px 0px;
@@ -88,7 +89,7 @@ $background-color: #fff;
     .auth {
       text-decoration: none;
       color: $background-color;
-      background-color: $main-color;
+      background-color: $secondary-color;
       padding: 10px 25px;
       font-size: 18px;
       font-weight: 400;
@@ -184,37 +185,26 @@ $background-color: #fff;
   text-decoration: none;
   height: 320px;
   text-align: left;
-  background-color: $main-color;
-  color: $background-color;
+  color: $main-color;
   border-radius: 2px;
-  justify-content: space-evenly;
-  &:hover{
-    color: $background-color;
+  justify-content: space-between;
+  &:hover {
+    color: $main-color;
   }
   h5 {
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    background-color: $main-color;
+  }
+  h6{
+    font-size: 15px;
+    color: $highlight-color;
+    text-transform: uppercase;
   }
   img {
     width: 100%;
     height: 50%;
     border-radius: 1px;
-  }
-  .userInfo{
-    align-items: center;
-    background-color: $main-color;
-    img{
-      width: 25px;
-      height: 25px;
-      background-color: $main-color;
-    }
-    h6{
-      background-color: $main-color;
-      padding-top: 10px;
-      padding-left: 10px;
-    }
   }
 }
 

@@ -1,11 +1,11 @@
 import React from "react";
+import placeholderImg from "../assets/17.png"
 
-const Article = ({title, article, coverImg}) => {
+const Article = () => {
     return(
         <div>
-            <img src={coverImg} alt="" />
-            <h1>{title}</h1>
-            <p>{article}</p>
+            <img src={placeholderImg} alt="" />
+           
         </div>
     )
 }

@@ -22,6 +22,7 @@ const Blog = () => {
           title={post.title}
           article={post.article}
           coverImg={post.coverImg}
+          timestamp={post.timestamp}
         />
       ))}
 

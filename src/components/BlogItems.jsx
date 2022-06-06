@@ -1,13 +1,10 @@
-import React from "react";
-import userImage from "../assets/OSLO.png";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // import commentImg from "../icons/message-square.svg"
 // import clapImg from "../icons/clap.svg"
 
-
-const BlogItems = ({title, coverImg, article}) =>{
-    
+const BlogItems = ({ title, coverImg, article, timestamp }) => {
   // const comment = useState(0)
   // const [clap, setClap] = useState(0)
 
@@ -17,17 +14,31 @@ const BlogItems = ({title, coverImg, article}) =>{
   //   })
   // }
 
-    return(
-        <Link to="/Article" className="blog-post mx-auto col-lg-4 col-md-6 col-sm-12 d-flex flex-column py-3 g-4 px-3 mb-2">
-        <h5 className="h5">{title}</h5>
-        <div className="d-flex userInfo" >
-          <img src={userImage} alt="" />
-          <h6 className="h6" >username</h6>
-        </div>
-        <img src={coverImg} alt='img' />
+  const [time, setTime] = useState("");
 
-      </Link>
-    )
-}
+  useEffect(() => {
+    
+
+    function getCurrentTime() {
+      const date = timestamp.seconds.toString();
+      setTime(() => {
+        return new Date(date * 1000);
+      });
+    }
+    getCurrentTime();
+  }, []);
+
+  return (
+    <Link
+      to="/Article"
+      className="blog-post mx-auto col-lg-4 col-md-6 col-sm-12 d-flex flex-column pb-3 g-5 px-3 mb-3"
+    >
+      <img src={coverImg} alt="img" />
+      <h5 className="h5 pt-1">{title}</h5>
+      <h6 className="h6 py-1">Chris Doe · {time.toString().substring(3, 15).toUpperCase()}</h6>
+      <p>{article.slice(0, 70) + "..."}</p>
+    </Link>
+  );
+};
 
 export default BlogItems;

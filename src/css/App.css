@@ -5,11 +5,11 @@
   border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #fff;
+  background-color: #fcfbf6;
 }
 
 * .placeholderImg {
-  max-width: 300px;
+  max-width: 350px;
 }
 
 .Header h4 {
@@ -79,7 +79,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   background: none;
-  background-color: #fff;
+  background-color: #fcfbf6;
   -webkit-animation: growDown 400ms ease-in-out forwards;
           animation: growDown 400ms ease-in-out forwards;
   -webkit-transform-origin: top center;
@@ -88,15 +88,15 @@
 
 .Header .Navbar.active .auth {
   text-decoration: none;
-  color: #fff;
-  background-color: #212121;
+  color: #fcfbf6;
+  background-color: #f03e3e;
   padding: 10px 25px;
   font-size: 18px;
   font-weight: 400;
 }
 
 .Header .Navbar.active a {
-  color: #212121;
+  color: #393939;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 20px;
@@ -167,7 +167,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #212121;
+  color: #393939;
   text-decoration: none;
 }
 
@@ -202,48 +202,33 @@
   text-decoration: none;
   height: 320px;
   text-align: left;
-  background-color: #212121;
-  color: #fff;
+  color: #393939;
   border-radius: 2px;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .blog-post:hover {
-  color: #fff;
+  color: #393939;
 }
 
 .blog-post h5 {
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  background-color: #212121;
+}
+
+.blog-post h6 {
+  font-size: 15px;
+  color: #777;
+  text-transform: uppercase;
 }
 
 .blog-post img {
   width: 100%;
   height: 50%;
   border-radius: 1px;
-}
-
-.blog-post .userInfo {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #212121;
-}
-
-.blog-post .userInfo img {
-  width: 25px;
-  height: 25px;
-  background-color: #212121;
-}
-
-.blog-post .userInfo h6 {
-  background-color: #212121;
-  padding-top: 10px;
-  padding-left: 10px;
 }
 
 .Upload {
@@ -265,7 +250,7 @@
   outline: none;
   padding: 5px 10px;
   margin-bottom: 15px;
-  border-bottom: 1px solid #212121;
+  border-bottom: 1px solid #393939;
 }
 
 .Upload form input[type="file"] {
@@ -274,7 +259,7 @@
 
 .Upload form .coverImg {
   background-color: #ffffff;
-  border: 1px dashed #212121;
+  border: 1px dashed #393939;
   padding: 10px 10px;
   text-align: center;
 }
@@ -283,8 +268,8 @@
 .Upload a {
   outline: none;
   text-transform: uppercase;
-  background-color: #212121;
-  color: #fff;
+  background-color: #f03e3e;
+  color: #fcfbf6;
   width: 150px;
   padding: 10px 0px;
   margin-top: 30px;
