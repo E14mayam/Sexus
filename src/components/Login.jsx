@@ -5,14 +5,7 @@ import { auth } from "./firebase";
 // import Modal from '@mui/material/Modal';
 
 const Login = () => {
-  const handleReset = () => {
-    Array.from(document.querySelectorAll("input")).forEach(
-      (input) => (input.value = "")
-    );
-    this.setState({
-      itemvalues: [{}],
-    });
-  };
+  
 
 
   // const [open, setOpen] = React.useState(false);
@@ -27,6 +20,9 @@ const Login = () => {
     auth
       .signInWithEmailAndPassword(email, password)
       .catch((err) => console.log(err));
+
+      setPassword("");
+      setEmail("");
   };
 
   // const style = {
@@ -58,7 +54,7 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button onClick={signIn && handleReset}>Login</button>
+        <button onClick={signIn}>Login</button>
       </form>
       {/* <div>
 

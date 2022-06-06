@@ -1,20 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { auth } from "./firebase"; 
-
+import { auth } from "./firebase";
 
 const SignUp = () => {
-  const handleReset = () => {
-    Array.from(document.querySelectorAll("input")).forEach(input => (input.value =""));
-    this.setState({
-      itemvalues:[{}]
-    })
-  }
-
   const [username, setUsername] = useState("");
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
@@ -50,6 +41,10 @@ const SignUp = () => {
         });
       })
       .catch((err) => console.log(err));
+
+    setPassword("");
+    setEmail("");
+    setUsername("");
   };
 
   return (
@@ -76,7 +71,7 @@ const SignUp = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button onClick={signUpUser && handleReset} >SignUp</button>
+        <button onClick={signUpUser}>SignUp</button>
       </form>
     </div>
   );

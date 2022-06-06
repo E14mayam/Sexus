@@ -181,12 +181,16 @@ $background-color: #fff;
 
 .blog-post {
   width: 300px;
+  text-decoration: none;
   height: 320px;
   text-align: left;
   background-color: $main-color;
   color: $background-color;
   border-radius: 2px;
   justify-content: space-evenly;
+  &:hover{
+    color: $background-color;
+  }
   h5 {
     font-weight: 600;
     letter-spacing: 1px;

@@ -199,6 +199,7 @@
 
 .blog-post {
   width: 300px;
+  text-decoration: none;
   height: 320px;
   text-align: left;
   background-color: #212121;
@@ -207,6 +208,10 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.blog-post:hover {
+  color: #fff;
 }
 
 .blog-post h5 {
