@@ -8,7 +8,7 @@ import * as yup from "yup";
 const schema = yup.object().shape({
   email: yup.string().email().required("Enter an email ⓧ"),
   password: yup.string().min(8).max(20).required("Invalid Password ⓧ"),
-  username: yup.string().min(3).max(10).required("Username must be between 3 and 10 characters ⓧ").matches(/^[a-z\s]+$/, "Only lower-case alphabets are allowed for this field ⓧ")
+  username: yup.string().min(3).max(10).matches(/^[a-z\s]+$/, "Only lower-case alphabets are allowed for this field ⓧ").required("Username must be between 3 and 10 characters ⓧ")
 })
 
 const SignUp = () => {
