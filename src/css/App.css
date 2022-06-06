@@ -257,6 +257,13 @@
   display: none;
 }
 
+.Upload form p {
+  color: #f03e3e;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .Upload form .coverImg {
   background-color: #ffffff;
   border: 1px dashed #393939;

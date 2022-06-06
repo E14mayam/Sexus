@@ -5,8 +5,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 const schema = yup.object().shape({
-  email: yup.string().email().required("Enter a registered email"),
-  password: yup.string().min(8).max(20).required("Invalid Password")
+  email: yup.string().email().required("Enter a recognized email ⓧ"),
+  password: yup.string().min(8).max(20).required("Invalid Password ⓧ")
 })
 
 const Login = () => {

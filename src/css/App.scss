@@ -227,7 +227,10 @@ $highlight-color: #777;
     input[type="file"] {
       display: none;
     }
-
+    p{
+    color: #f03e3e;
+    align-items: center;
+    }
     .coverImg {
       background-color: #ffffff;
       border: 1px dashed $main-color;

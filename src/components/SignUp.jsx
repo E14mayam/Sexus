@@ -1,7 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { auth } from "./firebase";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+
+const schema = yup.object().shape({
+  email: yup.string().email().required("Enter an email ⓧ"),
+  password: yup.string().min(8).max(20).required("Invalid Password ⓧ"),
+  username: yup.string().min(3).max(10).required("Username must be between 3 and 10 characters ⓧ").matches(/^[a-z\s]+$/, "Only lower-case alphabets are allowed for this field ⓧ")
+})
 
 const SignUp = () => {
+  const {register, handleSubmit, formState: { errors }} = useForm({
+    resolver: yupResolver(schema)
+  })
+
+
   const [username, setUsername] = useState("");
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
@@ -57,7 +72,9 @@ const SignUp = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           placeholder="Enter a username"
+          ref={register(username, { required: true })}
         />
+        <p>{errors.username?.message} </p>
         <label htmlFor="email">Email</label>
         <input
           type="email"
@@ -65,7 +82,9 @@ const SignUp = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="example@.gmail.com"
+          ref={register(email, { required: true })}
         />
+        <p>{errors.email?.message}</p>
         <label htmlFor="password">Password</label>
         <input
           type="password"
@@ -73,8 +92,10 @@ const SignUp = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Enter a password"
+          ref={register(password, { required: true })}
         />
-        <button onClick={signUpUser}>SignUp</button>
+        <p>{errors.password?.message}</p>
+        <button onClick={handleSubmit(signUpUser)}>SignUp</button>
       </form>
     </div>
   );
