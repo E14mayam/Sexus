@@ -3,25 +3,33 @@ import { Link } from "react-router-dom";
 import createBlogImg from "../icons/plus.svg";
 import BlogItems from "./BlogItems";
 import { db } from "./firebase";
+import Article from "./Article";
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    db.collection("post-data").orderBy('timestamp').onSnapshot((snapshot) => {
-      setPosts(snapshot.docs.map((doc) => doc.data()));
-    });
+    db.collection("post-data")
+      .orderBy("timestamp")
+      .onSnapshot((snapshot) => {
+        setPosts(snapshot.docs.map((doc) => doc.data()));
+      });
   }, []);
 
   return (
     <div className="blog content container mx-auto row row-cols-3 mt-5">
-      {posts.map(( post) => (
-        <BlogItems
-          title={post.title}
-          article={post.article}
-          coverImg={post.coverImg}
-        />
-      ))}
+      {posts.map(
+        (post) => (
+          
+            <BlogItems
+              title={post.title}
+              article={post.article}
+              coverImg={post.coverImg}
+            />
+      
+          
+        )
+      )}
 
       <Link to="/Blogcreate" className="createBlogIcon">
         <img src={createBlogImg} alt="img" />
