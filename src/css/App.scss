@@ -22,7 +22,7 @@ $highlight-color: #777;
 @mixin links {
   outline: none;
   text-transform: uppercase;
-  background-color: $secondary-color;
+  background-color: $main-color;
   color: $background-color;
   width: 150px;
   padding: 10px 0px;
@@ -89,7 +89,7 @@ $highlight-color: #777;
     .auth {
       text-decoration: none;
       color: $background-color;
-      background-color: $secondary-color;
+      background-color: $main-color;
       padding: 10px 25px;
       font-size: 18px;
       font-weight: 400;
@@ -119,47 +119,6 @@ $highlight-color: #777;
   }
   100% {
     transform: scaleY(1);
-  }
-}
-
-//Home Section
-.Home {
-  .featured-wrapper {
-    .featured-wrapper-txt {
-      text-transform: uppercase;
-      font-weight: 400;
-      text-align: left;
-    }
-    .featured-content {
-      padding: 10px 10px;
-      max-width: 600px;
-      max-height: 500px;
-      position: relative;
-      .featured-content-txt {
-        p {
-          text-align: left;
-          font-weight: 200;
-        }
-        h1 {
-          text-align: left;
-          text-transform: uppercase;
-          font-weight: 400;
-        }
-        a {
-          align-items: center;
-          color: $main-color;
-          text-decoration: none;
-          img {
-            width: 20px;
-            border: none;
-          }
-        }
-      }
-      img {
-        width: 100%;
-        height: 80%;
-      }
-    }
   }
 }
 
