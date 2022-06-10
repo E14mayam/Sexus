@@ -18,7 +18,7 @@ const Blog = () => {
   return (
     <div>
       <nav className="blognav container px-5 d-flex pt-5">
-        <a href="somewhere.com" className="me-2">Feed</a>
+        <Link to="/" className="me-2">Feed</Link>
         <a href="somewhere.com" className="me-2">Following</a>
         <Link to="/Blogcreate" className="createBlogIcon">
           <img src={createBlogImg} alt="img" />
