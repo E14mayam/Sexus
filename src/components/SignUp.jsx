@@ -8,12 +8,13 @@ import * as yup from "yup";
 const schema = yup.object().shape({
   email: yup.string().email().required("Enter an email ⓧ"),
   password: yup.string().min(8).max(20).required("Invalid Password ⓧ"),
-  username: yup.string().min(3).max(10).matches(/^[a-z\s]+$/, "Only lower-case alphabets are allowed for this field ⓧ").required("Username must be between 3 and 10 characters ⓧ")
+  username: yup.string().min(3).max(10).matches(/^[aA-zZ\s]+$/, "Only lower-case alphabets are allowed for this field ⓧ").required("Username must be between 3 and 10 characters ⓧ")
 })
 
 const SignUp = () => {
-  const {register, handleSubmit, formState: { errors }} = useForm({
-    resolver: yupResolver(schema)
+  const {register, handleSubmit, formState: { errors }, reset} = useForm({
+    resolver: yupResolver(schema),
+    reValidateMode:"onBlur" 
   })
 
 
@@ -47,6 +48,7 @@ const SignUp = () => {
   }, [user, username]);
 
   const signUpUser = (event) => {
+    console.log('fish')
     event.preventDefault();
     auth
       .createUserWithEmailAndPassword(email, password)
@@ -60,10 +62,11 @@ const SignUp = () => {
     setPassword("");
     setEmail("");
     setUsername("");
+    reset();
   };
 
   return (
-    <div className="Upload Signup container mx-auto mb-3">
+    <div className="Upload Signup container mx-auto mb-3" >
       <form className="d-flex flex-column px-5">
         <label htmlFor="userName">Username</label>
         <input
@@ -72,7 +75,8 @@ const SignUp = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           placeholder="Enter a username"
-          ref={register(username, { required: true })}
+          inputref={register(username)}
+          required
         />
         <p>{errors.username?.message} </p>
         <label htmlFor="email">Email</label>
@@ -82,7 +86,8 @@ const SignUp = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="example@.gmail.com"
-          ref={register(email, { required: true })}
+          inputref={register(email)}
+          required
         />
         <p>{errors.email?.message}</p>
         <label htmlFor="password">Password</label>
@@ -92,7 +97,8 @@ const SignUp = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Enter a password"
-          ref={register(password, { required: true })}
+          inputref={register(password)}
+          required
         />
         <p>{errors.password?.message}</p>
         <button onClick={handleSubmit(signUpUser)}>SignUp</button>

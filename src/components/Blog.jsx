@@ -16,19 +16,25 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className="blog content container mx-auto row row-cols-3 mt-5">
-      {posts.map((post) => (
-        <BlogItems
-          title={post.title}
-          article={post.article}
-          coverImg={post.coverImg}
-          timestamp={post.timestamp}
-        />
-      ))}
+    <div>
+      <nav className="blognav container px-5 d-flex pt-5">
+        <a href="somewhere.com" className="me-2">Feed</a>
+        <a href="somewhere.com">Following</a>
+      </nav>
+      <div className="blog content container mx-auto row row-cols-3 mt-1">
+        {posts.map((post) => (
+          <BlogItems
+            title={post.title}
+            article={post.article}
+            coverImg={post.coverImg}
+            timestamp={post.timestamp}
+          />
+        ))}
 
-      <Link to="/Blogcreate" className="createBlogIcon">
-        <img src={createBlogImg} alt="img" />
-      </Link>
+        <Link to="/Blogcreate" className="createBlogIcon">
+          <img src={createBlogImg} alt="img" />
+        </Link>
+      </div>
     </div>
   );
 };

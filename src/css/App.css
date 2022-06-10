@@ -5,7 +5,7 @@
   border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #fcfbf6;
+  background-color: #FFFFFF;
 }
 
 * .placeholderImg {
@@ -79,7 +79,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   background: none;
-  background-color: #fcfbf6;
+  background-color: #FFFFFF;
   -webkit-animation: growDown 400ms ease-in-out forwards;
           animation: growDown 400ms ease-in-out forwards;
   -webkit-transform-origin: top center;
@@ -88,7 +88,7 @@
 
 .Header .Navbar.active .auth {
   text-decoration: none;
-  color: #fcfbf6;
+  color: #FFFFFF;
   background-color: #f03e3e;
   padding: 10px 25px;
   font-size: 18px;
@@ -197,6 +197,21 @@
   height: 25px;
 }
 
+.blognav {
+  text-align: left;
+}
+
+.blognav a {
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #393939;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 5px 10px;
+  border: 2px solid #393939;
+  border-radius: 20px;
+}
+
 .blog-post {
   width: 300px;
   text-decoration: none;
@@ -204,30 +219,34 @@
   text-align: left;
   color: #393939;
   border-radius: 2px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .blog-post:hover {
   color: #393939;
 }
 
-.blog-post h5 {
+.blog-post h6 {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.blog-post h6 {
+.blog-post p {
   font-size: 15px;
+}
+
+.blog-post .date {
+  font-size: 13px;
   color: #777;
   text-transform: uppercase;
 }
 
 .blog-post img {
   width: 100%;
-  height: 50%;
+  height: 45%;
   border-radius: 1px;
 }
 
@@ -276,7 +295,7 @@
   outline: none;
   text-transform: uppercase;
   background-color: #f03e3e;
-  color: #fcfbf6;
+  color: #FFFFFF;
   width: 150px;
   padding: 10px 0px;
   margin-top: 30px;

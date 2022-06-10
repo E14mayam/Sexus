@@ -31,11 +31,11 @@ const BlogItems = ({ title, coverImg, article, timestamp }) => {
   return (
     <Link
       to="/Article"
-      className="blog-post mx-auto col-lg-4 col-md-6 col-sm-12 d-flex flex-column pb-3 g-5 px-3 mb-5"
+      className="blog-post mx-auto col-lg-4 col-md-6 col-sm-12 d-flex flex-column g-5 px-3"
     >
       <img src={coverImg} alt="img" />
-      <h5 className="h5 pt-1">{title}</h5>
-      <h6 className="h6 py-1">Chris Doe · {time.toString().substring(3, 15).toUpperCase()}</h6>
+      <h6 className="h6 pt-1">{title}</h6>
+      <h6 className="h6 date py-1">Chris Doe · {time.toString().substring(3, 15).toUpperCase()}</h6>
       <p>{article.slice(0, 70) + "..."}</p>
     </Link>
   );
