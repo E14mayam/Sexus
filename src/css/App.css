@@ -139,22 +139,6 @@
   }
 }
 
-.blog .createBlogIcon {
-  position: fixed;
-  width: auto;
-  right: 20px;
-  bottom: 15px;
-  padding: 10px 10px;
-  border-radius: 50%;
-  -webkit-box-shadow: 3px 3px 10px #dbdbdb;
-          box-shadow: 3px 3px 10px #dbdbdb;
-}
-
-.blog .createBlogIcon img {
-  width: 25px;
-  height: 25px;
-}
-
 .blognav {
   text-align: left;
 }
@@ -168,6 +152,14 @@
   padding: 5px 10px;
   border: 2px solid #000;
   border-radius: 20px;
+}
+
+.blognav .createBlogIcon {
+  background-color: #FFFFFF;
+}
+
+.blognav .createBlogIcon img {
+  width: 20px;
 }
 
 .blog-post {

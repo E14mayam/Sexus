@@ -19,7 +19,10 @@ const Blog = () => {
     <div>
       <nav className="blognav container px-5 d-flex pt-5">
         <a href="somewhere.com" className="me-2">Feed</a>
-        <a href="somewhere.com">Following</a>
+        <a href="somewhere.com" className="me-2">Following</a>
+        <Link to="/Blogcreate" className="createBlogIcon">
+          <img src={createBlogImg} alt="img" />
+        </Link>
       </nav>
       <div className="blog content container mx-auto row row-cols-3 mt-1">
         {posts.map((post) => (
@@ -30,10 +33,6 @@ const Blog = () => {
             timestamp={post.timestamp}
           />
         ))}
-
-        <Link to="/Blogcreate" className="createBlogIcon">
-          <img src={createBlogImg} alt="img" />
-        </Link>
       </div>
     </div>
   );

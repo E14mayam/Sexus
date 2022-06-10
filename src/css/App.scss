@@ -122,23 +122,6 @@ $highlight-color: #777;
   }
 }
 
-//Blog Section
-.blog {
-  .createBlogIcon {
-    position: fixed;
-    width: auto;
-    right: 20px;
-    bottom: 15px;
-    padding: 10px 10px;
-    border-radius: 50%;
-    box-shadow: 3px 3px 10px rgb(219, 219, 219);
-    img {
-      width: 25px;
-      height: 25px;
-    }
-  }
-}
-
 .blognav{
   text-align: left;
     a{
@@ -150,6 +133,13 @@ $highlight-color: #777;
       padding: 5px 10px;
       border: 2px solid $main-color;
       border-radius: 20px;
+    }
+
+    .createBlogIcon{
+      background-color: $background-color;
+      img{
+        width: 20px;
+      }
     }
   }
 
