@@ -23,7 +23,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Blog />} />
-        <Route path="/Article" element={<Article />} />
+        <Route path="/Article/:id" element={<Article />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Forums" element={<Forums />} />
         <Route path="/DarkSecrets" element={<DarkSecrets />} />

@@ -5,7 +5,7 @@
   border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 * .placeholderImg {
@@ -79,7 +79,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   background: none;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   -webkit-animation: growDown 400ms ease-in-out forwards;
           animation: growDown 400ms ease-in-out forwards;
   -webkit-transform-origin: top center;
@@ -88,7 +88,7 @@
 
 .Header .Navbar.active .auth {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #000;
   padding: 10px 25px;
   font-size: 18px;
@@ -145,7 +145,7 @@
 
 .blognav a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #000;
   font-weight: 500;
   font-size: 15px;
@@ -155,7 +155,7 @@
 }
 
 .blognav .createBlogIcon {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .blognav .createBlogIcon img {
@@ -164,37 +164,42 @@
 
 .blog-post {
   width: 300px;
-  text-decoration: none;
   height: 320px;
+}
+
+.blog-post a {
+  width: 100%;
+  height: 100%;
   text-align: left;
   color: #000;
   border-radius: 2px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  text-decoration: none;
 }
 
-.blog-post:hover {
+.blog-post a:hover {
   color: #000;
 }
 
-.blog-post h6 {
+.blog-post a h6 {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.blog-post p {
+.blog-post a p {
   font-size: 15px;
 }
 
-.blog-post .date {
+.blog-post a .date {
   font-size: 13px;
   color: #777;
   text-transform: uppercase;
 }
 
-.blog-post img {
+.blog-post a img {
   width: 100%;
   height: 45%;
   border-radius: 1px;
@@ -245,9 +250,22 @@
   outline: none;
   text-transform: uppercase;
   background-color: #000;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 150px;
   padding: 10px 0px;
   margin-top: 30px;
+}
+
+.Article h2 {
+  font-weight: 700;
+  letter-spacing: 5px;
+  line-height: 300px;
+  color: #ffffff;
+}
+
+.Article p {
+  word-spacing: 2px;
+  font-weight: 300;
+  font-size: 20px;
 }
 /*# sourceMappingURL=App.css.map */

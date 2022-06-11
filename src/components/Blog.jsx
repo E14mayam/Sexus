@@ -11,15 +11,23 @@ const Blog = () => {
     db.collection("post-data")
       .orderBy("timestamp")
       .onSnapshot((snapshot) => {
-        setPosts(snapshot.docs.map((doc) => doc.data()));
+        setPosts(
+          snapshot.docs.map((doc) => {
+            return { ...doc.data(), id: doc.id };
+          })
+        );
       });
   }, []);
 
   return (
     <div>
       <nav className="blognav container px-5 d-flex pt-5">
-        <Link to="/" className="me-2">Feed</Link>
-        <a href="somewhere.com" className="me-2">Following</a>
+        <Link to="/" className="me-2">
+          Feed
+        </Link>
+        <a href="somewhere.com" className="me-2">
+          Following
+        </a>
         <Link to="/Blogcreate" className="createBlogIcon">
           <img src={createBlogImg} alt="img" />
         </Link>
@@ -31,6 +39,7 @@ const Blog = () => {
             article={post.article}
             coverImg={post.coverImg}
             timestamp={post.timestamp}
+            id={post.id}
           />
         ))}
       </div>
