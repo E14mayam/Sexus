@@ -215,15 +215,25 @@ $highlight-color: #777;
 }
 
 .Article{
-  h2{
-    font-weight: 700;
-    letter-spacing: 5px;
-    line-height: 300px;
-    color: $background-color;
+  .Article-background{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1, h6{
+      background: none;
+      color: $background-color;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+    h6{
+     text-transform: uppercase;
+     font-size: 11px;
+    }
   }
   p{
-    word-spacing: 2px;
-    font-weight: 300;
-    font-size: 20px
+    text-align: left;
+    font-size: 15px;
   }
 }

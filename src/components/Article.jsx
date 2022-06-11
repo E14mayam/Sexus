@@ -32,7 +32,11 @@ const Article = () => {
 
   return (
     <div className="container Article">
-      <h2 className="h2 py-3 w-100 text-center" style={backgroundI(postData.coverImg)}>{postData.title}</h2>
+      <div style={backgroundI(postData.coverImg)} className="Article-background px-3">
+      <h6 className="h6 pb-2">Sexus Article</h6>
+      <h1 className="h1">{postData.title}</h1>
+      {/* <h6>{postData.timestamp.toString().substring(3, 15).toUpperCase()}</h6> */}
+      </div>
       <p>{postData.article}</p>
     </div>
   );
