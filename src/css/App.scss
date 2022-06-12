@@ -179,7 +179,7 @@ $highlight-color: #777;
 }
 
 .Upload {
-  margin-top: 110px;
+  margin-top: 50px;
   form {
     text-align: left;
     label {
@@ -244,17 +244,21 @@ $highlight-color: #777;
   .Article{
     .Article-background{
       height: 250px;
+      width: 80%;
+      margin: 0 auto;
     }
   }
 }
-
 @media (max-width: 600px){
   .Article{
     .Article-background{
       height: 200px;
+      width: 80%;
+      margin: 0 auto;
       h1{
         font-size: 25px;
       }
     }
   }
 }
+//Media Query ends here

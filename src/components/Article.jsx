@@ -42,7 +42,7 @@ const Article = () => {
   getTime();
 
   return (
-    <div className="container Article">
+    <div className="container Article mt-4">
       <div
         style={backgroundI(postData.coverImg)}
         className="Article-background px-2"
