@@ -47,7 +47,7 @@ const Article = () => {
         style={backgroundI(postData.coverImg)}
         className="Article-background px-2"
       >
-        <h6 className="h6 pb-2">Sexus Article</h6>
+        <h6 className="h6 pb-2">Sexus Story</h6>
         <h1 className="h1">{postData.title}</h1>
         <h6 className="pt-3">{time.toString().substring(3, 15)}</h6>
       </div>
