@@ -214,9 +214,10 @@ $highlight-color: #777;
   }
 }
 
+//Blog extention / Article
 .Article{
   .Article-background{
-    height: 300px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -235,5 +236,25 @@ $highlight-color: #777;
   p{
     text-align: left;
     font-size: 15px;
+  }
+}
+
+//Media Query for Article
+@media (max-width: 900px){
+  .Article{
+    .Article-background{
+      height: 250px;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .Article{
+    .Article-background{
+      height: 200px;
+      h1{
+        font-size: 25px;
+      }
+    }
   }
 }

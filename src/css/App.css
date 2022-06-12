@@ -257,7 +257,7 @@
 }
 
 .Article .Article-background {
-  height: 300px;
+  height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -288,5 +288,20 @@
 .Article p {
   text-align: left;
   font-size: 15px;
+}
+
+@media (max-width: 900px) {
+  .Article .Article-background {
+    height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .Article .Article-background {
+    height: 200px;
+  }
+  .Article .Article-background h1 {
+    font-size: 25px;
+  }
 }
 /*# sourceMappingURL=App.css.map */
