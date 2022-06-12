@@ -1,11 +1,13 @@
 //typeface
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 //colors and fonts
 $main-color: #000;
 $secondary-color: #f03e3e;
 $background-color: #ffffff;
 $highlight-color: #777;
+$paragraph-font: "Lato";
 
 // Global Styling
 * {
@@ -235,7 +237,9 @@ $highlight-color: #777;
   }
   p{
     text-align: left;
-    font-size: 15px;
+    font-size: 20px;
+    line-height: 2rem;
+    font-family: $paragraph-font;
   }
 }
 
