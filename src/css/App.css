@@ -293,7 +293,7 @@
 @media (max-width: 900px) {
   .Article .Article-background {
     height: 250px;
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
   }
 }
@@ -301,7 +301,7 @@
 @media (max-width: 600px) {
   .Article .Article-background {
     height: 200px;
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
   }
   .Article .Article-background h1 {
