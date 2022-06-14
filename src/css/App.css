@@ -214,6 +214,10 @@
   text-align: left;
 }
 
+.Upload form .error {
+  color: #f03e3e;
+}
+
 .Upload form label {
   letter-spacing: 1px;
   text-transform: uppercase;

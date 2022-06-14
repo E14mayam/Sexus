@@ -184,6 +184,9 @@ $paragraph-font: "Lato";
   margin-top: 50px;
   form {
     text-align: left;
+    .error{
+      color: $secondary-color;
+    }
     label {
       letter-spacing: 1px;
       text-transform: uppercase;
