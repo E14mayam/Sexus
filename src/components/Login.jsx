@@ -1,6 +1,8 @@
 import React from "react";
 import { Formik } from "formik";
 import { auth } from "./firebase";
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
 
 const initialValues = {
   email: "",
@@ -27,7 +29,33 @@ const submitForm = (values) => {
   console.log(values);
   auth
     .signInWithEmailAndPassword(values.email, values.password)
-    .catch((err) => console.log(err));
+    .then(
+      Toastify({
+        text: "Welcome Back To Sexus",
+        duration: 3000,
+        newWindow: true,
+        gravity: "bottom", 
+        position: "center", 
+        stopOnFocus: true, 
+        style: {
+          background: "#0d0d0d",
+        },
+        onClick: function(){} 
+      }).showToast()  
+    )
+    .catch((err) => Toastify({
+      text: "user not found",
+      duration: 3000,
+      newWindow: true,
+      gravity: "bottom", 
+      position: "center", 
+      stopOnFocus: true, 
+      style: {
+        background: "#f03e3e",
+      },
+      onClick: function(){} 
+    }).showToast());
+    
 };
 
 const Login = () => {

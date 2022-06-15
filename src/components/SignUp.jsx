@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { auth } from "./firebase";
 import { Formik } from "formik";
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
 
 const initialValues = {
   username: "",
@@ -37,8 +39,32 @@ const submitForm = (values) => {
       return authUser.user.updateProfile({
         displayName: values.username,
       });
-    })
-    .catch((err) => console.log(err));
+    }).then(
+      Toastify({
+        text: 'Welcome To Sexus',
+        duration: 3000,
+        newWindow: true,
+        gravity: "bottom", 
+        position: "center", 
+        stopOnFocus: true, 
+        style: {
+          background: "#0d0d0d",
+        },
+        onClick: function(){} 
+      }).showToast()
+    )
+    .catch((err) => Toastify({
+      text: "Email is in use by another user",
+      duration: 3000,
+      newWindow: true,
+      gravity: "bottom", 
+      position: "center", 
+      stopOnFocus: true, 
+      style: {
+        background: "#f03e3e",
+      },
+      onClick: function(){} 
+    }).showToast());
 };
 
 const SignUp = () => {
