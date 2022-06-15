@@ -307,12 +307,12 @@
 
 @media (max-width: 600px) {
   .Article .Article-background {
-    height: 200px;
+    height: 220px;
     width: 90%;
     margin: 0 auto;
   }
   .Article .Article-background h1 {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=App.css.map */
