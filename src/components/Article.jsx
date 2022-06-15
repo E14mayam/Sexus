@@ -15,7 +15,7 @@ const getPostData = async (docId) => {
 const Article = () => {
   const { id } = useParams();
   const [postData, setPostData] = useState({});
-  const [time, setTime] = useState('')
+  const [time, setTime] = useState("");
 
   getPostData(id).then((post) => {
     setPostData(post);
@@ -30,13 +30,13 @@ const Article = () => {
     };
   }
 
-  async function getTime(){
+  async function getTime() {
     await getPostData;
 
     const TimeinSeconds = postData.timestamp.seconds.toString();
     setTime(() => {
-      return new Date( 1000 * TimeinSeconds)
-    })
+      return new Date(1000 * TimeinSeconds);
+    });
   }
 
   getTime();

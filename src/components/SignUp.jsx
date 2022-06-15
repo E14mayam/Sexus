@@ -1,13 +1,13 @@
 import React from "react";
 import { auth } from "./firebase";
 import { Formik } from "formik";
-import Toastify from 'toastify-js'
-import "toastify-js/src/toastify.css"
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
 
 const initialValues = {
   username: "",
   email: "",
-  password: ""
+  password: "",
 };
 
 const validate = (values) => {
@@ -39,32 +39,35 @@ const submitForm = (values) => {
       return authUser.user.updateProfile({
         displayName: values.username,
       });
-    }).then(
+    })
+    .then(
       Toastify({
-        text: 'Welcome To Sexus',
+        text: "Welcome To Sexus",
         duration: 3000,
         newWindow: true,
-        gravity: "bottom", 
-        position: "center", 
-        stopOnFocus: true, 
+        gravity: "bottom",
+        position: "center",
+        stopOnFocus: true,
         style: {
           background: "#0d0d0d",
         },
-        onClick: function(){} 
+        onClick: function () {},
       }).showToast()
     )
-    .catch((err) => Toastify({
-      text: "Email is in use by another user",
-      duration: 3000,
-      newWindow: true,
-      gravity: "bottom", 
-      position: "center", 
-      stopOnFocus: true, 
-      style: {
-        background: "#f03e3e",
-      },
-      onClick: function(){} 
-    }).showToast());
+    .catch((err) =>
+      Toastify({
+        text: "Email is in use by another user",
+        duration: 5000,
+        newWindow: true,
+        gravity: "bottom",
+        position: "center",
+        stopOnFocus: true,
+        style: {
+          background: "#f03e3e",
+        },
+        onClick: function () {},
+      }).showToast()
+    );
 };
 
 const SignUp = () => {
@@ -87,10 +90,7 @@ const SignUp = () => {
         } = formik;
         return (
           <div className="Upload Signup container mx-auto mb-3">
-            <form
-              className="d-flex flex-column px-5"
-              onSubmit={handleSubmit}
-            >
+            <form className="d-flex flex-column px-5" onSubmit={handleSubmit}>
               <div className="form-row d-flex flex-column">
                 <label htmlFor="username">Username</label>
                 <input

@@ -278,7 +278,8 @@
           align-items: center;
 }
 
-.Article .Article-background h1, .Article .Article-background h6 {
+.Article .Article-background h1,
+.Article .Article-background h6 {
   background: none;
   color: #ffffff;
   font-weight: 600;

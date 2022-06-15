@@ -1,6 +1,6 @@
 //typeface
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 //colors and fonts
 $main-color: #000;
@@ -184,7 +184,7 @@ $paragraph-font: "Lato";
   margin-top: 50px;
   form {
     text-align: left;
-    .error{
+    .error {
       color: $secondary-color;
     }
     label {
@@ -220,25 +220,26 @@ $paragraph-font: "Lato";
 }
 
 //Blog extention / Article
-.Article{
-  .Article-background{
+.Article {
+  .Article-background {
     height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h1, h6{
+    h1,
+    h6 {
       background: none;
       color: $background-color;
       font-weight: 600;
       letter-spacing: 2px;
     }
-    h6{
-     text-transform: uppercase;
-     font-size: 11px;
+    h6 {
+      text-transform: uppercase;
+      font-size: 11px;
     }
   }
-  p{
+  p {
     text-align: left;
     font-size: 20px;
     line-height: 2rem;
@@ -247,22 +248,22 @@ $paragraph-font: "Lato";
 }
 
 //Media Query for Article
-@media (max-width: 900px){
-  .Article{
-    .Article-background{
+@media (max-width: 900px) {
+  .Article {
+    .Article-background {
       height: 250px;
       width: 90%;
       margin: 0 auto;
     }
   }
 }
-@media (max-width: 600px){
-  .Article{
-    .Article-background{
+@media (max-width: 600px) {
+  .Article {
+    .Article-background {
       height: 220px;
       width: 90%;
       margin: 0 auto;
-      h1{
+      h1 {
         font-size: 20px;
       }
     }
