@@ -26,7 +26,7 @@ const Blog = () => {
           Feed
         </Link>
         <a href="somewhere.com" className="me-2">
-          Following
+          News
         </a>
         <Link to="/Blogcreate" className="createBlogIcon">
           <img src={createBlogImg} alt="img" />
