@@ -32,7 +32,7 @@ const validate = (values) => {
   return errors;
 };
 
-const submitForm = (values) => {
+const submitForm = (values, { resetForm }) => {
   auth
     .createUserWithEmailAndPassword(values.email, values.password)
     .then((authUser) => {
@@ -68,6 +68,8 @@ const submitForm = (values) => {
         onClick: function () {},
       }).showToast()
     );
+
+  resetForm({ values: "" });
 };
 
 const SignUp = () => {

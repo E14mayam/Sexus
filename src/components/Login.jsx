@@ -25,7 +25,7 @@ const validate = (values) => {
   return errors;
 };
 
-const submitForm = (values) => {
+const submitForm = (values, {resetForm}) => {
   console.log(values);
   auth
     .signInWithEmailAndPassword(values.email, values.password)
@@ -57,6 +57,7 @@ const submitForm = (values) => {
         onClick: function () {},
       }).showToast()
     );
+    resetForm({ values: "" })
 };
 
 const Login = () => {
