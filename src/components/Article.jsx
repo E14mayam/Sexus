@@ -79,7 +79,6 @@ const Article = () => {
 
       <div className="clap-wrapper mx-auto d-flex justify-content-evenly">
         <button>
-          <span className="h6">Clap</span>
           <svg width="24" height="24" viewBox="0 0 24 24" aria-label="clap">
             <path
               fill-rule="evenodd"
@@ -94,7 +93,6 @@ const Article = () => {
           </svg>{" "}
         </button>
         <button>
-          <span className="h6">Comment</span>
           <svg
             width="24"
             height="24"
