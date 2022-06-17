@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { useParams } from "react-router";
 import { db } from "./firebase";
 import firebase from "firebase/compat/app";
-
-import shareIcon from "../icons/share.png";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
 
@@ -116,13 +114,13 @@ const Article = () => {
 
       <h4 className="h4 text-start pb-2 ms-2">Share To</h4>
       <div className="share-wrapper mb-5 d-flex justify-content center text-center">
-        <button class="button-33 mx-2 h6" role="button">
+        <button class="button-33 mx-2 h6" >
           Facebook
         </button>
-        <button class="button-33 mx-2 h6" role="button">
+        <button class="button-33 mx-2 h6" >
           Twitter
         </button>
-        <button class="button-33 mx-2 h6" onClick={copy} role="button">
+        <button class="button-33 mx-2 h6" onClick={copy}>
           Copy Link
         </button>
       </div>
