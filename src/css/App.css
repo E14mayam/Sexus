@@ -300,14 +300,15 @@
 
 .clap-wrapper {
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 30px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
           box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
   position: fixed;
   bottom: 30px;
   right: 0;
   left: 0;
-  padding: 5px 0px;
+  padding: 7px 0px;
+  width: 25%;
 }
 
 .clap-wrapper button {
@@ -315,20 +316,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid #e7a5a5;
+  border: 2px solid #000;
   padding: 2px 10px;
   border-radius: 20px;
-  align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .clap-wrapper button span {
   color: #000;
-  font-weight: 400;
+  font-weight: 500;
   padding-right: 10px;
-  padding-top: 5px;
 }
 
 .clap-wrapper button img {
@@ -336,15 +332,18 @@
   height: 22px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 970px) {
   .Article .Article-background {
     height: 250px;
     width: 90%;
     margin: 0 auto;
   }
+  .clap-wrapper {
+    width: 50%;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .Article .Article-background {
     height: 220px;
     width: 90%;
@@ -353,8 +352,36 @@
   .Article .Article-background h1 {
     font-size: 20px;
   }
-  .clap-wrapper button {
-    border: none;
+  .clap-wrapper {
+    width: 80%;
   }
+}
+
+.share-wrapper .button-33 {
+  background-color: #000;
+  border-radius: 100px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+          box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  border: 0;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+.share-wrapper .button-33:hover {
+  background-color: #777;
+  -webkit-transform: scale(1.05) rotate(-1deg);
+          transform: scale(1.05) rotate(-1deg);
 }
 /*# sourceMappingURL=App.css.map */
