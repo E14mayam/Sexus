@@ -59,8 +59,8 @@ const Article = () => {
       text: "Link Copied",
       duration: 3000,
       newWindow: true,
-      gravity: "top",
-      position: "right",
+      gravity: "bottom",
+      position: "center",
       stopOnFocus: true,
       style: {
         background: "#0d0d0d",
@@ -82,9 +82,9 @@ const Article = () => {
       <p className="px-3 pt-3">{postData.article}</p>
 
       <div className="clap-wrapper w-50 mx-auto d-flex justify-content-evenly">
-        <button><img src={clapIcon} alt="" /></button>
-        <button><img src={commentIcon} alt="" /></button>
-        <button onClick={ copy }><img src={shareIcon} alt="" /></button>  
+        <button className="d-flex"><span className="h6 d-none d-lg-flex d-md-flex">Like</span><img src={clapIcon} alt="" />  </button>
+        <button className="d-flex"><span className="h6 d-none d-lg-flex d-md-flex">Comment</span><img src={commentIcon} alt="" />  </button>
+        <button onClick={ copy } className="d-flex"><span className="h6 d-none d-lg-flex d-md-flex">Share</span><img src={shareIcon} alt="" />  </button>  
       </div>
     </div>
   );
