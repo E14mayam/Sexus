@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { useParams } from "react-router";
 import { db } from "./firebase";
 import firebase from "firebase/compat/app";
+import clapIcon from "../icons/clap.svg";
+import commentIcon from "../icons/comment.svg";
+import shareIcon from "../icons/share.svg"
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
 
 const getPostData = async (docId) => {
   const result = await db
@@ -16,6 +21,8 @@ const Article = () => {
   const { id } = useParams();
   const [postData, setPostData] = useState({});
   const [time, setTime] = useState("");
+  // const [clap, setClap] = useState("");
+
 
   getPostData(id).then((post) => {
     setPostData(post);
@@ -41,6 +48,27 @@ const Article = () => {
 
   getTime();
 
+  function copy() {
+    const el = document.createElement('input');
+    el.value = window.location.href;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    Toastify({
+      text: "Link Copied",
+      duration: 3000,
+      newWindow: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "#0d0d0d",
+      },
+      onClick: function () {},
+    }).showToast()
+  }
+
   return (
     <div className="container Article mt-4">
       <div
@@ -52,6 +80,12 @@ const Article = () => {
         <h6 className="pt-3">{time.toString().substring(3, 15)}</h6>
       </div>
       <p className="px-3 pt-3">{postData.article}</p>
+
+      <div className="clap-wrapper w-50 mx-auto d-flex justify-content-evenly">
+        <button><img src={clapIcon} alt="" /></button>
+        <button><img src={commentIcon} alt="" /></button>
+        <button onClick={ copy }><img src={shareIcon} alt="" /></button>  
+      </div>
     </div>
   );
 };
