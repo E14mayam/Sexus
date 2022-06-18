@@ -280,7 +280,6 @@ $paragraph-font: "Lato";
       margin: 0 auto;
     }
   }
- 
 }
 @media (max-width: 768px) {
   .Article {
@@ -293,7 +292,6 @@ $paragraph-font: "Lato";
       }
     }
   }
-  
 }
 //Media Query ends here
 
@@ -301,7 +299,6 @@ $paragraph-font: "Lato";
   .button-33 {
     background-color: $main-color;
     border-radius: 100px;
-    color: $background-color;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
       rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
       rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
@@ -315,14 +312,17 @@ $paragraph-font: "Lato";
     text-decoration: none;
     transition: all 250ms;
     border: 0;
-
+    color: $background-color;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-  }
-
-  .button-33:hover {
-    background-color: $highlight-color;
-    transform: scale(1.05) rotate(-1deg);
+    img {
+      width: 30px;
+      height: 30px;
+      background-color: #000;
+    }
+    &:hover {
+      transform: scale(1.05) rotate(-1deg);
+    }
   }
 }

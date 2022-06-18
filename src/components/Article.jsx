@@ -4,6 +4,8 @@ import { db } from "./firebase";
 import firebase from "firebase/compat/app";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
+import facebook from "../assets/facebook.svg"
+import twitter from "../assets/twitter.svg"
 
 const getPostData = async (docId) => {
   const result = await db
@@ -55,7 +57,7 @@ const Article = () => {
       text: "Link Copied",
       duration: 3000,
       newWindow: true,
-      gravity: "bottom",
+      gravity: "top",
       position: "right",
       stopOnFocus: true,
       style: {
@@ -110,13 +112,13 @@ const Article = () => {
         </button>
       </div>
 
-      <h4 className="h4 text-start pb-2 ms-2">Share To</h4>
+      <h4 className="h4 text-start pb-2 ms-3">Share To</h4>
       <div className="share-wrapper mb-5 d-flex justify-content center text-center">
         <button class="button-33 mx-2 h6" >
-          Facebook
+          <img src={facebook} alt="" />
         </button>
         <button class="button-33 mx-2 h6" >
-          Twitter
+           <img src={twitter} alt="" />
         </button>
         <button class="button-33 mx-2 h6" onClick={copy}>
           Copy Link

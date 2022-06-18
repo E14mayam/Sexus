@@ -348,7 +348,6 @@
 .share-wrapper .button-33 {
   background-color: #000;
   border-radius: 100px;
-  color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
           box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   cursor: pointer;
@@ -359,6 +358,7 @@
   -webkit-transition: all 250ms;
   transition: all 250ms;
   border: 0;
+  color: #ffffff;
   -moz-user-select: none;
    -ms-user-select: none;
        user-select: none;
@@ -367,8 +367,13 @@
       touch-action: manipulation;
 }
 
+.share-wrapper .button-33 img {
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+}
+
 .share-wrapper .button-33:hover {
-  background-color: #777;
   -webkit-transform: scale(1.05) rotate(-1deg);
           transform: scale(1.05) rotate(-1deg);
 }
