@@ -114,7 +114,7 @@ const Article = () => {
       </div>
 
       <h4 className="h4 text-start pb-2 ms-3">Share To</h4>
-      <div className="share-wrapper mb-5 d-flex justify-content center text-center">
+      <div className="share-wrapper mb-1 d-flex justify-content center text-center">
         <button class="button-33 mx-2 h6" >
           <img src={facebook} alt="" />
         </button>
