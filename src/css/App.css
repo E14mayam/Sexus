@@ -375,9 +375,4 @@
   height: 30px;
   background-color: #000;
 }
-
-.share-wrapper .button-33:hover {
-  -webkit-transform: scale(1.05) rotate(-1deg);
-          transform: scale(1.05) rotate(-1deg);
-}
 /*# sourceMappingURL=App.css.map */
