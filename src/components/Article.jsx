@@ -58,10 +58,11 @@ const Article = () => {
       duration: 3000,
       newWindow: true,
       gravity: "top",
-      position: "right",
+      position: "center",
       stopOnFocus: true,
       style: {
         background: "#0d0d0d",
+        borderRadius: "40px"
       },
       onClick: function () {},
     }).showToast();

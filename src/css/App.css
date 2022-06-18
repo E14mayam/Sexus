@@ -309,7 +309,7 @@
   right: 0;
   left: 0;
   padding: 7px 0px;
-  width: 25%;
+  width: 15%;
 }
 
 .clap-wrapper button {
@@ -342,6 +342,9 @@
   }
   .Article .Article-background h1 {
     font-size: 20px;
+  }
+  .clap-wrapper {
+    width: 50%;
   }
 }
 
