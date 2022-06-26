@@ -2,7 +2,6 @@ import React from "react";
 import { auth } from "./firebase";
 import { Formik } from "formik";
 import { Link } from "react-router-dom";
-import Login from "./Login";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
 
