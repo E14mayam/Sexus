@@ -10,7 +10,7 @@ const ForgotPassword = () => {
 
   const recoverPassword = () => {
     console.log(email)
-    sendPasswordResetEmail(email, auth).then(() =>{
+    sendPasswordResetEmail(auth , email).then(() =>{
         Toastify({
             text: "Wait Shortly",
             duration: 3000,
@@ -24,6 +24,7 @@ const ForgotPassword = () => {
             onClick: function () {},
           }).showToast()
     }).catch((err) => {
+      console.log(err)
       Toastify({
         text: `${err}`,
         duration: 3000,
