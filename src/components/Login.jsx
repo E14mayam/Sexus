@@ -1,5 +1,6 @@
-import React from "react";
+import React,{useState} from "react";
 import { Formik } from "formik";
+import { Link } from "react-router-dom";
 import { auth } from "./firebase";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
@@ -26,7 +27,6 @@ const validate = (values) => {
 };
 
 const submitForm = (values, {resetForm}) => {
-  console.log(values);
   auth
     .signInWithEmailAndPassword(values.email, values.password)
     .then(
@@ -59,8 +59,8 @@ const submitForm = (values, {resetForm}) => {
     );
     resetForm({ values: "" })
 };
-
 const Login = () => {
+   
   return (
     <Formik
       initialValues={initialValues}
@@ -116,6 +116,8 @@ const Login = () => {
                   <span className="error">{errors.password}</span>
                 )}
               </div>
+
+              <Link to="/ForgotPassword" className="login-pass">Forgot password</Link>
 
               <button
                 type="submit"

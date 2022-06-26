@@ -10,6 +10,8 @@ import Blogcreate from "./components/Blogcreate";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import Article from "./components/Article";
+import Profile from "./components/Profile"
+import ForgotPassword from "./components/ForgotPassword";
 
 
 
@@ -30,6 +32,8 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Blogcreate" element={<Blogcreate />} />
         <Route path="/Signup" element={<SignUp />} />
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="/ForgotPassword" element={<ForgotPassword />} />
       </Routes>
     </div>
   );

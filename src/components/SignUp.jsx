@@ -1,6 +1,8 @@
 import React from "react";
 import { auth } from "./firebase";
 import { Formik } from "formik";
+import { Link } from "react-router-dom";
+import Login from "./Login";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
 
@@ -63,7 +65,10 @@ const submitForm = (values, { resetForm }) => {
         position: "center",
         stopOnFocus: true,
         style: {
-          background: "#f03e3e",
+          background: "#ff63633b",
+        color:"#f03e3e",
+        border: "1px solid #f03e3e",
+        borderRadius: "2px"
         },
         onClick: function () {},
       }).showToast()
@@ -71,6 +76,8 @@ const submitForm = (values, { resetForm }) => {
 
   resetForm({ values: "" });
 };
+
+
 
 const SignUp = () => {
   return (
@@ -147,6 +154,8 @@ const SignUp = () => {
                 )}
               </div>
 
+             <Link to="/Login" className="login-pass">I have an account ?</Link>
+
               <button
                 type="submit"
                 className={dirty && isValid ? "" : "disabled-btn"}
@@ -161,23 +170,5 @@ const SignUp = () => {
     </Formik>
   );
 };
-
-// const schema = yup.object().shape({
-//   email: yup.string().email().required("Enter an email ⓧ"),
-//   password: yup.string().min(8).max(20).required("Invalid Password ⓧ"),
-//   username: yup.string().min(3).max(10).matches(/^[aA-zZ\s]+$/, "Only lower-case alphabets are allowed for this field ⓧ").required("Username must be between 3 and 10 characters ⓧ")
-// })
-
-// const signUpUser = (event) => {
-//   event.preventDefault();
-//   auth
-//     .createUserWithEmailAndPassword(email, password)
-//     .then((authUser) => {
-//       return authUser.user.updateProfile({
-//         displayName: username,
-//       });
-//     })
-//     .catch((err) => console.log(err));
-// };
 
 export default SignUp;

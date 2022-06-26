@@ -32,7 +32,7 @@ const Header = () => {
         ></button>
          <h4 className="h4 m-0">Sexus</h4>
         <div className="User d-flex">
-          <img src={userImage} alt="" />
+          <Link to="/Profile"><img src={userImage} alt="" /></Link>
         </div>
       </header>
     </div>
