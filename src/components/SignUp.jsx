@@ -153,7 +153,7 @@ const SignUp = () => {
                 )}
               </div>
 
-             <Link to="/Login" className="login-pass">I have an account ?</Link>
+             <Link to="/Login" className="login-pass">have an account ?</Link>
 
               <button
                 type="submit"

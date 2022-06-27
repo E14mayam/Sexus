@@ -18,18 +18,19 @@ const Profile = () => {
         return user.email
     })
 
-    return (
-        <div>
-          <h1>Welcome {username}</h1>
-          <h3>You signed in with {email}</h3>
-        </div>
-      );
   } else {
     // No user is signed in.
     return(
         <SignUp/>
     )
   }
+
+  return (
+    <div>
+      <h1>Welcome {username}</h1>
+      <h3>You signed in with {email}</h3>
+    </div>
+  );
 };
 
 export default Profile;
