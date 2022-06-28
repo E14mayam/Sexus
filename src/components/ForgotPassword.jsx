@@ -10,7 +10,8 @@ const ForgotPassword = () => {
     const email = useRef()
 
   function resetPassword() {
-    return sendPasswordResetEmail(auth, email.current.value).then(() =>{
+    return sendPasswordResetEmail(auth, email.current.value).then((e) =>{
+      e.preventDefault();
             Toastify({
                 text: "Wait Shortly",
                 duration: 3000,

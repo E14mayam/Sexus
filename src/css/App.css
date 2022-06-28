@@ -391,4 +391,13 @@
   height: 30px;
   background-color: #000;
 }
+
+.Profile h1 {
+  font-weight: 600;
+}
+
+.Profile h5 {
+  font-weight: 400;
+  font-size: 13px;
+}
 /*# sourceMappingURL=App.css.map */
