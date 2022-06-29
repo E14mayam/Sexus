@@ -26,9 +26,6 @@ const Blog = () => {
           Feed
         </Link>
         <Link to="/" className="me-2">
-          News
-        </Link>
-        <Link to="/" className="me-2">
           Requests
         </Link>
         <Link to="/Blogcreate" className="createBlogIcon">

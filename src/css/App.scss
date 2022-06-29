@@ -1,13 +1,14 @@
 //typeface
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 
 //colors and fonts
 $main-color: #000;
 $secondary-color: #f03e3e;
 $background-color: #ffffff;
 $highlight-color: #777;
-$paragraph-font: "Lato";
+$paragraph-font: "Roboto";
 
 // Global Styling
 * {
@@ -27,6 +28,7 @@ $paragraph-font: "Lato";
   background-color: $main-color;
   color: $background-color;
   width: 150px;
+  border-radius: 40px;
   padding: 10px 0px;
   margin-top: 30px;
   margin: 15px auto 0px;
@@ -90,12 +92,9 @@ $paragraph-font: "Lato";
     transform-origin: top center;
 
     .auth {
-      text-decoration: none;
-      color: $background-color;
-      background-color: $main-color;
-      padding: 10px 25px;
-      font-size: 18px;
+      @include links();
       font-weight: 400;
+      font-size: px;
     }
 
     a {
@@ -275,7 +274,7 @@ $paragraph-font: "Lato";
   right: 0;
   left: 0;
   padding: 7px 0px;
-  width: 15%;
+  width: 10%;
   button {
     outline: none;
     align-items: center;
@@ -310,7 +309,7 @@ $paragraph-font: "Lato";
     }
   }
   .clap-wrapper {
-    width: 50%;
+    width: 35%;
   }
 }
 //Media Query ends here
@@ -321,15 +320,11 @@ $paragraph-font: "Lato";
     border-radius: 100px;
     cursor: pointer;
     display: inline-block;
-    padding: 7px 20px;
+    padding: 5px 15px;
     text-align: center;
     text-decoration: none;
     transition: all 250ms;
-    border: 0;
     color: $background-color;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
     img {
       width: 30px;
       height: 30px;

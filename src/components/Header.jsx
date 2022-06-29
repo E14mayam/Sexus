@@ -24,7 +24,7 @@ const Header = () => {
             About
           </Link>
           <Link to="/Login" onClick={handleToggler} className="h6 mx-2">Login</Link>
-          <Link to="/Signup" onClick={handleToggler} className="h6 mx-2 auth mt-5">Sign Up</Link>
+          <Link to="/Signup" onClick={handleToggler} className="h6 mx-2 auth mt-3">SignUp</Link>
         </nav>
         <button
           className={`headerBtn ${exit ? "active" : ""} d-block`}

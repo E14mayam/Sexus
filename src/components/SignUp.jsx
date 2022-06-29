@@ -41,7 +41,7 @@ const submitForm = (values, { resetForm }) => {
         displayName: values.username,
       });
     })
-    .then(
+    .then(() => {
       Toastify({
         text: "Welcome To Sexus",
         duration: 3000,
@@ -53,9 +53,9 @@ const submitForm = (values, { resetForm }) => {
           background: "#0d0d0d",
         },
         onClick: function () {},
-      }).showToast()
-    )
-    .catch((err) =>
+      }).showToast();
+    })
+    .catch(() =>
       Toastify({
         text: "Email is in use by another user",
         duration: 5000,
@@ -65,9 +65,9 @@ const submitForm = (values, { resetForm }) => {
         stopOnFocus: true,
         style: {
           background: "#ff63633b",
-        color:"#f03e3e",
-        border: "1px solid #f03e3e",
-        borderRadius: "2px"
+          color: "#f03e3e",
+          border: "1px solid #f03e3e",
+          borderRadius: "2px",
         },
         onClick: function () {},
       }).showToast()
@@ -75,8 +75,6 @@ const submitForm = (values, { resetForm }) => {
 
   resetForm({ values: "" });
 };
-
-
 
 const SignUp = () => {
   return (
@@ -153,7 +151,9 @@ const SignUp = () => {
                 )}
               </div>
 
-             <Link to="/Login" className="login-pass">have an account ?</Link>
+              <Link to="/Login" className="login-pass">
+                have an account ?
+              </Link>
 
               <button
                 type="submit"

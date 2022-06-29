@@ -26,10 +26,10 @@ const validate = (values) => {
   return errors;
 };
 
-const submitForm = (values, {resetForm}) => {
+const submitForm = (values, { resetForm }) => {
   auth
     .signInWithEmailAndPassword(values.email, values.password)
-    .then(
+    .then(() => {
       Toastify({
         text: "Welcome Back To Sexus",
         duration: 3000,
@@ -41,11 +41,11 @@ const submitForm = (values, {resetForm}) => {
           background: "#0d0d0d",
         },
         onClick: function () {},
-      }).showToast()
-    )
-    .catch((err) =>
+      }).showToast();
+    })
+    .catch(() => {
       Toastify({
-        text: "user not found",
+        text: "User not found",
         duration: 3000,
         newWindow: true,
         gravity: "bottom",
@@ -55,12 +55,11 @@ const submitForm = (values, {resetForm}) => {
           background: "#f03e3e",
         },
         onClick: function () {},
-      }).showToast()
-    );
-    resetForm({ values: "" })
+      }).showToast();
+    });
+  resetForm({ values: "" });
 };
 const Login = () => {
-   
   return (
     <Formik
       initialValues={initialValues}
@@ -117,7 +116,9 @@ const Login = () => {
                 )}
               </div>
 
-              <Link to="/ForgotPassword" className="login-pass">Forgot password</Link>
+              <Link to="/ForgotPassword" className="login-pass">
+                Forgot password ?
+              </Link>
 
               <button
                 type="submit"
