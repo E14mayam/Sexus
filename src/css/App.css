@@ -350,28 +350,6 @@
   height: 22px;
 }
 
-@media (max-width: 970px) {
-  .Article .Article-background {
-    height: 250px;
-    width: 90%;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .Article .Article-background {
-    height: 220px;
-    width: 90%;
-    margin: 0 auto;
-  }
-  .Article .Article-background h1 {
-    font-size: 20px;
-  }
-  .clap-wrapper {
-    width: 40%;
-  }
-}
-
 .share-wrapper .button-33 {
   background-color: #000;
   border-radius: 100px;
@@ -398,5 +376,30 @@
 .Profile h5 {
   font-weight: 400;
   font-size: 13px;
+}
+
+@media (max-width: 970px) {
+  .Article .Article-background {
+    height: 250px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .Article .Article-background {
+    height: 220px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .Article .Article-background h1 {
+    font-size: 20px;
+  }
+  .clap-wrapper {
+    width: 40%;
+  }
+  .Profile h5 {
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=App.css.map */

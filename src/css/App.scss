@@ -287,33 +287,6 @@ $paragraph-font: "Roboto";
   }
 }
 
-//Media Query for Article and clap-wrapper
-@media (max-width: 970px) {
-  .Article {
-    .Article-background {
-      height: 250px;
-      width: 90%;
-      margin: 0 auto;
-    }
-  }
-}
-@media (max-width: 768px) {
-  .Article {
-    .Article-background {
-      height: 220px;
-      width: 90%;
-      margin: 0 auto;
-      h1 {
-        font-size: 20px;
-      }
-    }
-  }
-  .clap-wrapper {
-    width: 40%;
-  }
-}
-//Media Query ends here
-
 .share-wrapper {
   .button-33 {
     background-color: $main-color;
@@ -342,3 +315,35 @@ $paragraph-font: "Roboto";
     font-size: 13px;
   }
 }
+
+//Media Query for Article and clap-wrapper and Profile
+@media (max-width: 970px) {
+  .Article {
+    .Article-background {
+      height: 250px;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .Article {
+    .Article-background {
+      height: 220px;
+      width: 90%;
+      margin: 0 auto;
+      h1 {
+        font-size: 20px;
+      }
+    }
+  }
+  .clap-wrapper {
+    width: 40%;
+  }
+  .Profile{
+    h5{
+      font-size: 10px;
+    }
+  }
+}
+//Media Query ends here
