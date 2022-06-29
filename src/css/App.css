@@ -98,7 +98,7 @@
   margin-top: 30px;
   margin: 15px auto 0px;
   font-weight: 400;
-  font-size: px;
+  font-size: 16.5px;
 }
 
 .Header .Navbar.active a {
@@ -333,7 +333,7 @@
   right: 0;
   left: 0;
   padding: 7px 0px;
-  width: 10%;
+  width: 12%;
 }
 
 .clap-wrapper button {
@@ -368,7 +368,7 @@
     font-size: 20px;
   }
   .clap-wrapper {
-    width: 35%;
+    width: 40%;
   }
 }
 
