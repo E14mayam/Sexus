@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "./firebase";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
@@ -42,6 +42,8 @@ const submitForm = (values, { resetForm }) => {
         },
         onClick: function () {},
       }).showToast();
+      const navigate = useNavigate();
+      navigate('/Profile')
     })
     .catch(() => {
       Toastify({
@@ -59,6 +61,7 @@ const submitForm = (values, { resetForm }) => {
     });
   resetForm({ values: "" });
 };
+
 const Login = () => {
   return (
     <Formik
@@ -81,7 +84,7 @@ const Login = () => {
           <div className="Upload Signup container mx-auto mb-3">
             <form className="d-flex flex-column px-5" onSubmit={handleSubmit}>
               <div className="form-row d-flex flex-column">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Email :</label>
                 <input
                   type="email"
                   name="email"
@@ -99,7 +102,7 @@ const Login = () => {
               </div>
 
               <div className="form-row d-flex flex-column">
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password">Password :</label>
                 <input
                   type="password"
                   name="password"

@@ -1,14 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gantari:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 * {
-  font-family: "Poppins";
+  font-family: "Gantari";
   padding: 0;
   border: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background-color: #ffffff;
 }
-
 * .placeholderImg {
   width: 200px;
 }
@@ -16,9 +13,8 @@
 .Header h4 {
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
 }
-
 .Header .headerBtn {
   background: url("../icons/menu.svg");
   outline: none;
@@ -27,70 +23,51 @@
   width: 25px;
   height: 25px;
 }
-
 .Header .headerBtn.active {
   background: url("../icons/x.svg");
   background-size: contain;
 }
-
 .Header .User {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .Header .User img {
   width: 25px;
   height: 25px;
   margin-right: 10px;
+  box-shadow: 2px 2px 7px rgb(228, 228, 228);
+  border-radius: 50%;
   cursor: pointer;
 }
-
 .Header .User h5 {
   font-weight: 400;
   text-transform: uppercase;
   cursor: pointer;
 }
-
 .Header .Navbar {
   z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .Header .Navbar.active {
   display: block;
   top: 70px;
   position: fixed;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   left: 0;
   right: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background: none;
   background-color: #ffffff;
   -webkit-animation: growDown 400ms ease-in-out forwards;
           animation: growDown 400ms ease-in-out forwards;
-  -webkit-transform-origin: top center;
-          transform-origin: top center;
+  transform-origin: top center;
 }
-
 .Header .Navbar.active .auth {
   outline: none;
   text-transform: uppercase;
-  background-color: #000;
+  background-color: #040303;
   color: #ffffff;
   width: 150px;
   border-radius: 2px;
@@ -100,70 +77,58 @@
   font-weight: 400;
   font-size: 16.5px;
 }
-
 .Header .Navbar.active a {
-  color: #000;
+  color: #040303;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 20px;
   margin: 10px 0px;
   background: none;
 }
-
 .Header .Navbar.active a:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 @-webkit-keyframes growDown {
   0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
+    transform: scaleY(0);
   }
   80% {
-    -webkit-transform: scaleY(1.1);
-            transform: scaleY(1.1);
+    transform: scaleY(1.1);
   }
   100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    transform: scaleY(1);
   }
 }
 
 @keyframes growDown {
   0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
+    transform: scaleY(0);
   }
   80% {
-    -webkit-transform: scaleY(1.1);
-            transform: scaleY(1.1);
+    transform: scaleY(1.1);
   }
   100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    transform: scaleY(1);
   }
 }
-
 .blognav {
   text-align: left;
 }
-
-.blognav a {
+.blognav a, .blognav button {
   text-decoration: none;
   color: #ffffff;
-  background-color: #000;
-  font-weight: 500;
+  background-color: #040303;
+  font-weight: 600;
   font-size: 15px;
   padding: 5px 10px;
-  border: 2px solid #000;
+  outline: none;
+  border: 2px solid #040303;
   border-radius: 20px;
 }
-
 .blognav .createBlogIcon {
   background-color: #ffffff;
 }
-
 .blognav .createBlogIcon img {
   width: 20px;
 }
@@ -172,39 +137,34 @@
   width: 300px;
   height: 320px;
 }
-
 .blog-post a {
   width: 100%;
   height: 100%;
   text-align: left;
-  color: #000;
+  color: #040303;
   border-radius: 2px;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   text-decoration: none;
 }
-
 .blog-post a:hover {
-  color: #000;
+  color: #040303;
 }
-
 .blog-post a h6 {
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-
+.blog-post a h6:hover {
+  text-decoration: underline;
+}
 .blog-post a p {
   font-size: 15px;
 }
-
 .blog-post a .date {
   font-size: 13px;
   color: #777;
   text-transform: uppercase;
 }
-
 .blog-post a img {
   width: 100%;
   height: 45%;
@@ -214,40 +174,35 @@
 .Upload {
   margin-top: 50px;
 }
-
 .Upload form {
   text-align: left;
 }
-
 .Upload form .error {
   color: #f03e3e;
   padding-bottom: 10px;
 }
-
 .Upload form label {
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 10px 0px;
+  color: #777;
+  font-weight: 800;
 }
-
 .Upload form input,
 .Upload form textarea {
   outline: none;
   padding: 5px 10px;
   margin-bottom: 15px;
-  border-bottom: 1px solid #000;
+  border: 1px solid #040303;
+  border-radius: 2px;
 }
-
-.Upload form input[type="file"] {
+.Upload form input[type=file] {
   display: none;
 }
-
 .Upload form span {
   color: #f03e3e;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #ff63633b;
+  align-items: center;
+  background-color: rgba(255, 99, 99, 0.231372549);
   border: 1px solid #f03e3e;
   padding: 10px 10px 0px;
   width: auto;
@@ -255,29 +210,26 @@
   margin: 10px 0px;
   text-align: center;
 }
-
 .Upload form .login-pass {
   background: none;
   width: auto;
   text-decoration: underline;
-  color: #000;
+  color: #040303;
   text-transform: uppercase;
   padding: 10px 0px 0px 0px;
   float: right;
 }
-
 .Upload form .coverImg {
   background-color: #ffffff;
-  border: 1px dashed #000;
+  border: 1px dashed #040303;
   padding: 10px 10px;
   text-align: center;
 }
-
 .Upload button,
 .Upload a {
   outline: none;
   text-transform: uppercase;
-  background-color: #000;
+  background-color: #040303;
   color: #ffffff;
   width: 150px;
   border-radius: 2px;
@@ -288,21 +240,11 @@
 
 .Article .Article-background {
   height: 400px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 .Article .Article-background h1,
 .Article .Article-background h6 {
   background: none;
@@ -310,24 +252,30 @@
   font-weight: 600;
   letter-spacing: 2px;
 }
-
 .Article .Article-background h6 {
   text-transform: uppercase;
   font-size: 11px;
 }
-
 .Article p {
   text-align: left;
   font-size: 20px;
   line-height: 2rem;
-  font-family: "Roboto";
+}
+.Article h4 {
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #777;
+  font-size: 12px;
+  cursor: pointer;
+}
+.Article h4:hover {
+  color: #040303;
 }
 
 .clap-wrapper {
   background-color: #ffffff;
   border-radius: 30px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
-          box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
   position: fixed;
   bottom: 30px;
   right: 0;
@@ -335,34 +283,28 @@
   padding: 7px 0px;
   width: 12%;
 }
-
 .clap-wrapper button {
   outline: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 2px 10px;
   border-radius: 20px;
 }
-
 .clap-wrapper button img {
   width: 22px;
   height: 22px;
 }
 
 .share-wrapper .button-33 {
-  background-color: #000;
+  background-color: #040303;
   border-radius: 100px;
   cursor: pointer;
   display: inline-block;
   padding: 5px 15px;
   text-align: center;
   text-decoration: none;
-  -webkit-transition: all 250ms;
   transition: all 250ms;
   color: #ffffff;
 }
-
 .share-wrapper .button-33 img {
   width: 30px;
   height: 30px;
@@ -372,10 +314,19 @@
 .Profile h1 {
   font-weight: 600;
 }
-
 .Profile h5 {
   font-weight: 400;
   font-size: 13px;
+}
+.Profile img {
+  width: 200px;
+  height: 200px;
+  padding: 10px 10px;
+  box-shadow: 2px 2px 7px rgb(228, 228, 228);
+  border-radius: 50%;
+}
+.Profile nav button {
+  padding: 3px 10px;
 }
 
 @media (max-width: 970px) {
@@ -385,7 +336,6 @@
     margin: 0 auto;
   }
 }
-
 @media (max-width: 768px) {
   .Article .Article-background {
     height: 220px;
@@ -402,4 +352,36 @@
     font-size: 10px;
   }
 }
-/*# sourceMappingURL=App.css.map */
+.Updateprofile {
+  text-align: center;
+}
+.Updateprofile h4 {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #777;
+}
+.Updateprofile img {
+  width: 200px;
+  height: 200px;
+  padding: 10px 10px;
+  box-shadow: 2px 2px 7px rgb(228, 228, 228);
+  border-radius: 50%;
+}
+.Updateprofile img:focus {
+  border: 1px solid #f03e3e;
+}
+.Updateprofile .img.active {
+  border: 1px solid #040303;
+}
+.Updateprofile button {
+  outline: none;
+  text-transform: uppercase;
+  background-color: #040303;
+  color: #ffffff;
+  width: 150px;
+  border-radius: 2px;
+  padding: 10px 0px;
+  margin-top: 30px;
+  margin: 15px auto 0px;
+}/*# sourceMappingURL=App.css.map */

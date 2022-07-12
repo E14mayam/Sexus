@@ -4,8 +4,8 @@ import { db } from "./firebase";
 import firebase from "firebase/compat/app";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
-import facebook from "../assets/facebook.svg"
-import twitter from "../assets/twitter.svg"
+import facebook from "../assets/facebook.svg";
+import twitter from "../assets/twitter.svg";
 
 const getPostData = async (docId) => {
   const result = await db
@@ -20,11 +20,28 @@ const Article = () => {
   const { id } = useParams();
   const [postData, setPostData] = useState({});
   const [time, setTime] = useState("");
+  // const [comments, setComments] = useState("");
   // const [clap, setClap] = useState("");
 
   getPostData(id).then((post) => {
     setPostData(post);
   });
+
+  // useEffect(() => {
+  //   let unsubscribe;
+  //   if (id) {
+  //     unsubscribe = db
+  //       .collection("post-data")
+  //       .doc(id)
+  //       .collection("comments")
+  //       .onSnapshot((snapshot) => {
+  //         setComments(snapshot.docs.map((doc) => doc.data()));
+  //       });
+  //   }
+  //   return() =>{
+  //     unsubscribe();
+  //   }
+  // }, [id]);
 
   function backgroundI(url) {
     return {
@@ -62,7 +79,7 @@ const Article = () => {
       stopOnFocus: true,
       style: {
         background: "#0d0d0d",
-        borderRadius: "40px"
+        borderRadius: "40px",
       },
       onClick: function () {},
     }).showToast();
@@ -78,6 +95,8 @@ const Article = () => {
         <h1 className="h1">{postData.title}</h1>
         <h6 className="pt-3">{time.toString().substring(3, 15)}</h6>
       </div>
+      <h4 className="h4 h-txt pt-4">A sexus article written by Chris Doe, </h4>
+      <h4 className="h4 pb-3">Posted on {time.toString().substring(0, 15)}</h4>
       <p className="px-3 pt-3">{postData.article}</p>
 
       <div className="clap-wrapper mx-auto d-flex justify-content-evenly">
@@ -113,12 +132,12 @@ const Article = () => {
         </button>
       </div>
 
-      <div className="share-wrapper mb-1 d-flex justify-content center text-center">
-        <button class="button-33 mx-2 h6" >
+      <div className="share-wrapper mb-1 d-flex justify-content-center">
+        <button class="button-33 mx-2 h6">
           <img src={facebook} alt="" />
         </button>
-        <button class="button-33 mx-2 h6" >
-           <img src={twitter} alt="" />
+        <button class="button-33 mx-2 h6">
+          <img src={twitter} alt="" />
         </button>
         <button class="button-33 mx-2 h6" onClick={copy}>
           Copy Link

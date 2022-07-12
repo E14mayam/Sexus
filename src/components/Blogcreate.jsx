@@ -47,14 +47,14 @@ const Blogcreate = () => {
   return (
     <div className="Upload container mx-auto mb-5">
       <form className="d-flex flex-column px-5">
-        <label htmlFor="title">Title</label>
+        <label htmlFor="title">Title :</label>
         <input
           type="text"
           id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <label htmlFor="article">Article</label>
+        <label htmlFor="article">Article :</label>
         <textarea
           id="article"
           cols="30"

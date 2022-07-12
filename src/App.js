@@ -12,8 +12,7 @@ import Login from "./components/Login";
 import Article from "./components/Article";
 import Profile from "./components/Profile"
 import ForgotPassword from "./components/ForgotPassword";
-
-
+import UpdateProfile from "./components/Updateprofile";
 
 
 function App() {
@@ -34,6 +33,7 @@ function App() {
         <Route path="/Signup" element={<SignUp />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/ForgotPassword" element={<ForgotPassword />} />
+        <Route path="/UpdateProfile" element={<UpdateProfile />} />
       </Routes>
     </div>
   );

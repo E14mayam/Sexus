@@ -80,7 +80,7 @@ const ForgotPassword = (values, { resetForm }) => {
         <div className="Upload Signup container mx-auto mb-3">
           <form className="d-flex flex-column px-5">
             <div className="form-row d-flex flex-column">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">Email :</label>
               <input
                 ref={email}
                 type="email"

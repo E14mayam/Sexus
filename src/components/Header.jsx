@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import userImage from "../assets/OSLO.png";
+import userImage from "../assets/avatar1.svg";
 import { Link } from "react-router-dom";
 
 const Header = () => {

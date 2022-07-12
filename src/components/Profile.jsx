@@ -13,29 +13,27 @@ const Profile = () => {
     if (user) {
       // User is signed in, see docs for a list of available properties
       // https://firebase.google.com/docs/reference/js/firebase.User
-      setEmail(() =>{
-        return user.email
-      })
-      setUsername(() =>{
-        return user.displayName
-      })
+      setEmail(() => {
+        return user.email;
+      });
+      setUsername(() => {
+        return user.displayName;
+      });
     } else {
-      return (
-        <SignUp/>
-      )
+      return <SignUp />;
     }
   });
 
   const user = firebase.auth().currentUser;
   if (user) {
-    return(
-      < Userprofile name={username} email={email}/>
-    )
+    return (
+      <div>
+        <Userprofile username={username} email={email} />
+      </div>
+    );
   } else {
     // No user is signed in.
-    return(
-      <SignUp/>
-    )
+    return <SignUp />;
   }
 };
 
