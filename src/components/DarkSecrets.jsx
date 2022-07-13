@@ -1,8 +1,20 @@
 import React from "react";
-import placeholderImg from "../assets/17.png"
+import { Link } from "react-router-dom";
+import addForum from "../icons/plus.svg";
+
 const DarkSecrets = () => {
     return(
-        <div> <img src={placeholderImg} alt="" className="placeholderImg" /></div>
+        <div><nav className="blognav container px-5 d-flex pt-5">
+        <Link to="/" className="me-2">
+          Featured
+        </Link>
+        <Link to="/" className="me-2">
+          Recent
+        </Link>
+        <Link to="/" className="createBlogIcon">
+          <img src={addForum} alt="img" />
+        </Link>
+      </nav></div>
     )
 }
 
