@@ -16,9 +16,6 @@ import UpdateProfile from "./components/Updateprofile";
 
 
 function App() {
- 
-
-
   return (
     <div className="App text-center">
       <Header />

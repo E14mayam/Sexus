@@ -30,6 +30,7 @@ const submitForm = (values, { resetForm }) => {
   auth
     .signInWithEmailAndPassword(values.email, values.password)
     .then(() => {
+      const navigate = useNavigate();
       Toastify({
         text: "Welcome Back To Sexus",
         duration: 3000,
@@ -42,7 +43,6 @@ const submitForm = (values, { resetForm }) => {
         },
         onClick: function () {},
       }).showToast();
-      const navigate = useNavigate();
       navigate('/Profile')
     })
     .catch(() => {

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // import commentImg from "../icons/message-square.svg"
 // import clapImg from "../icons/clap.svg"
 
-const BlogItems = ({ title, coverImg, article, timestamp, id }, props) => {
+const BlogItems = ({ title, coverImg, article, timestamp, id }) => {
   // const comment = useState(0)
   // const [clap, setClap] = useState(0)
 

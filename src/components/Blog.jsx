@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import createBlogImg from "../icons/plus.svg";
+import addBlog from "../icons/plus.svg";
 import BlogItems from "./BlogItems";
 import { db } from "./firebase";
 
@@ -29,7 +29,7 @@ const Blog = () => {
           Requests
         </Link>
         <Link to="/Blogcreate" className="createBlogIcon">
-          <img src={createBlogImg} alt="img" />
+          <img src={addBlog} alt="img" />
         </Link>
       </nav>
       <div className="blog content container mx-auto row row-cols-3 mt-1">

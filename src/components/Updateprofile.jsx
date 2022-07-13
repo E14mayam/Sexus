@@ -13,14 +13,14 @@ import Toastify from "toastify-js";
 
 const UpdateProfile = () => {
   const images = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6];
-  const [image, setImage] = useState(null);
   const [selected, setselected] = useState(false);
+  const [image, setImage] = useState(null);
   const navigate = useNavigate();
+
 
   function handleToggler(index) {
     setselected(index);
-    setImage(images[index].substring(14, 21) + ".svg");
-    console.log(image);
+    console.log(image)
   }
 
   const complete = () => {
@@ -59,14 +59,14 @@ const UpdateProfile = () => {
 
   return (
     <div className="Updateprofile container pt-5">
-      <h4 className="h4 pb-5">Select Your Avatar : </h4>
+      <h5 className="h5 pb-5">Double click to select Your Avatar : </h5>
       <div>
         {images.map((img, index) => (
           <div
             className="d-inline-block mb-5"
             onClick={() => handleToggler(index)}
           >
-            <Img image={img} key={index} id={index} selected={selected} />
+            <Img image={img} key={index} id={index} selected={selected} setImage={setImage} images={images}/>
           </div>
         ))}
       </div>
