@@ -10,7 +10,7 @@ const Header = () => {
   }
 
   const user = auth.currentUser;
-  const profileImg = user.photoURL;
+  const profileImg = avatar;
     
 
   return (
