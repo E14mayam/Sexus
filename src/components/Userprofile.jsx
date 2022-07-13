@@ -6,7 +6,7 @@ import { auth } from "./firebase";
 
 const Userprofile = ({ username, email }) => {
   const user = auth.currentUser;
-  const profileImg = user.photoURL;
+  const profileImg = avatar;
 
 
   return (
