@@ -38,7 +38,7 @@ const Header = () => {
         ></button>
          <h4 className="h4 m-0">Sexus</h4>
         <div className="User d-flex">
-          <Link to="/Profile"><img src={user != null ? profileImg : avatar} alt="" /></Link>
+          <Link to="/Profile"><img src={user.photoURL != null ? profileImg : avatar} alt="" /></Link>
         </div>
       </header>
     </div>
