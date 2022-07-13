@@ -19,20 +19,19 @@ const UpdateProfile = () => {
 
   function handleToggler(index) {
     setselected(index);
-    setImage(images[index]);
+    setImage(images[index].substring(14, 21) + ".svg");
     console.log(image);
   }
 
   const complete = () => {
     const storage = getStorage();
-    getDownloadURL(ref(storage, `images/${image.name}`)).then((url) => {
+    getDownloadURL(ref(storage, `images/${image}`)).then((url) => {
       // `url` is the download URL for 'images/stars.jpg'
-
       const user = auth.currentUser;
       user
         .updateProfile({ photoURL: url })
         .then(function () {
-          navigate('/Profile')
+          navigate("/Profile");
         })
         .catch((error) => {
           console.log(error);

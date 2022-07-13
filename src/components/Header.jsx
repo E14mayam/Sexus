@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import userImage from "../assets/avatar1.svg";
+import avatar from "../assets/avatar1.svg";
 import { Link } from "react-router-dom";
+import { auth } from "./firebase";
 
 const Header = () => {
   const [exit, menu] = useState(false);
   function handleToggler(){
     menu(prev => !prev)
   }
+
+  const user = auth.currentUser;
+  const profileImg = user.photoURL;
+    
+
   return (
     <div className="Header py-4 d-flex flex-column px-3">
       <header className="container d-flex justify-content-between py-2 px-3">
@@ -32,7 +38,7 @@ const Header = () => {
         ></button>
          <h4 className="h4 m-0">Sexus</h4>
         <div className="User d-flex">
-          <Link to="/Profile"><img src={userImage} alt="" /></Link>
+          <Link to="/Profile"><img src={user != null ? profileImg : avatar} alt="" /></Link>
         </div>
       </header>
     </div>
